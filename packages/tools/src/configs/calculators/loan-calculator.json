@@ -1,0 +1,71 @@
+{
+  "id": "loan-calculator",
+  "slug": "loan-calculator",
+  "name": "Loan Calculator",
+  "description": "Calculate monthly loan payments, total interest, and total repayment for mortgages, car loans, and personal loans.",
+  "shortDesc": "Calculate loan payments and interest",
+  "category": "calculators",
+  "icon": "💰",
+  "inputs": [
+    {
+      "id": "principal",
+      "type": "number",
+      "label": "Loan Amount ($)",
+      "placeholder": "Enter loan amount",
+      "required": true,
+      "validation": {
+        "min": 1
+      }
+    },
+    {
+      "id": "rate",
+      "type": "number",
+      "label": "Annual Interest Rate (%)",
+      "placeholder": "Enter interest rate",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "years",
+      "type": "number",
+      "label": "Loan Term (Years)",
+      "placeholder": "Enter loan term",
+      "required": true,
+      "validation": {
+        "min": 1,
+        "max": 50
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyPayment",
+      "type": "text",
+      "label": "Monthly Payment",
+      "format": "currency:2"
+    },
+    {
+      "id": "totalPayment",
+      "type": "text",
+      "label": "Total Payment",
+      "format": "currency:2"
+    },
+    {
+      "id": "totalInterest",
+      "type": "text",
+      "label": "Total Interest",
+      "format": "currency:2"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "loan-calculator"
+  },
+  "seo": {
+    "title": "Loan Calculator - Free Monthly Payment Calculator",
+    "description": "Calculate monthly loan payments, total interest, and total repayment for mortgages, car loans, and personal loans.",
+    "keywords": ["loan calculator", "mortgage calculator", "monthly payment", "car loan calculator"]
+  }
+}

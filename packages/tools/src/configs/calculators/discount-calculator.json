@@ -1,0 +1,55 @@
+{
+  "id": "discount-calculator",
+  "slug": "discount-calculator",
+  "name": "Discount Calculator",
+  "description": "Calculate sale prices, savings, and final prices after applying discounts and coupons.",
+  "shortDesc": "Calculate discounts and sale prices",
+  "category": "calculators",
+  "icon": "🏷️",
+  "inputs": [
+    {
+      "id": "originalPrice",
+      "type": "number",
+      "label": "Original Price ($)",
+      "placeholder": "Enter original price",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "discount",
+      "type": "number",
+      "label": "Discount Percentage (%)",
+      "placeholder": "Enter discount",
+      "required": true,
+      "validation": {
+        "min": 0,
+        "max": 100
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "salePrice",
+      "type": "text",
+      "label": "Sale Price",
+      "format": "currency:2"
+    },
+    {
+      "id": "savings",
+      "type": "text",
+      "label": "You Save",
+      "format": "currency:2"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "discount-calculator"
+  },
+  "seo": {
+    "title": "Discount Calculator - Calculate Sale Prices",
+    "description": "Calculate sale prices and savings after applying discounts. Perfect for shopping and sales.",
+    "keywords": ["discount calculator", "sale price calculator", "percentage off", "savings calculator"]
+  }
+}

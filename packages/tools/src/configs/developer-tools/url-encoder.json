@@ -1,0 +1,45 @@
+{
+  "id": "url-encoder",
+  "slug": "url-encoder",
+  "name": "URL Encoder/Decoder",
+  "description": "Encode and decode URLs for safe transmission in web applications and APIs.",
+  "shortDesc": "Encode and decode URLs",
+  "category": "developer-tools",
+  "icon": "🔗",
+  "inputs": [
+    {
+      "id": "url",
+      "type": "textarea",
+      "label": "URL",
+      "placeholder": "Enter your URL here...",
+      "required": true
+    },
+    {
+      "id": "action",
+      "type": "select",
+      "label": "Action",
+      "options": [
+        {"label": "Encode URL", "value": "encode"},
+        {"label": "Decode URL", "value": "decode"}
+      ],
+      "required": true,
+      "defaultValue": "encode"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Result"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "url-encoder"
+  },
+  "seo": {
+    "title": "URL Encoder/Decoder - Free URL Encoding Tool",
+    "description": "Encode and decode URLs for safe transmission in web applications and APIs.",
+    "keywords": ["url encoder", "url decoder", "url encode", "url decode", "percent encoding"]
+  }
+}

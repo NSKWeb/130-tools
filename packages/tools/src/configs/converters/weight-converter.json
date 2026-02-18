@@ -1,0 +1,64 @@
+{
+  "id": "weight-converter",
+  "slug": "weight-converter",
+  "name": "Weight Converter",
+  "description": "Convert weight measurements between different units including milligrams, grams, kilograms, ounces, pounds, and stones.",
+  "shortDesc": "Convert between weight units",
+  "category": "converters",
+  "icon": "⚖️",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value",
+      "required": true
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Milligrams (mg)", "value": "mg"},
+        {"label": "Grams (g)", "value": "g"},
+        {"label": "Kilograms (kg)", "value": "kg"},
+        {"label": "Ounces (oz)", "value": "oz"},
+        {"label": "Pounds (lb)", "value": "lb"},
+        {"label": "Stones (st)", "value": "st"}
+      ],
+      "required": true,
+      "defaultValue": "kg"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Milligrams (mg)", "value": "mg"},
+        {"label": "Grams (g)", "value": "g"},
+        {"label": "Kilograms (kg)", "value": "kg"},
+        {"label": "Ounces (oz)", "value": "oz"},
+        {"label": "Pounds (lb)", "value": "lb"},
+        {"label": "Stones (st)", "value": "st"}
+      ],
+      "required": true,
+      "defaultValue": "lb"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "json",
+      "label": "Conversions"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "weight-converter"
+  },
+  "seo": {
+    "title": "Weight Converter - Free Unit Conversion Tool",
+    "description": "Convert weight measurements between milligrams, grams, kilograms, ounces, pounds, and stones instantly.",
+    "keywords": ["weight converter", "kg to lb", "grams to ounces", "unit converter"]
+  }
+}

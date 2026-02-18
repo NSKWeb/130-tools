@@ -1,0 +1,61 @@
+{
+  "id": "emi-calculator",
+  "slug": "emi-calculator",
+  "name": "EMI Calculator",
+  "description": "Calculate Equated Monthly Installment (EMI) for loans. Essential for loan planning and financial management.",
+  "shortDesc": "Calculate loan EMI",
+  "category": "calculators",
+  "icon": "🏦",
+  "inputs": [
+    {
+      "id": "principal",
+      "type": "number",
+      "label": "Loan Amount ($)",
+      "placeholder": "Enter loan amount",
+      "required": true
+    },
+    {
+      "id": "rate",
+      "type": "number",
+      "label": "Interest Rate (% per annum)",
+      "placeholder": "Enter interest rate",
+      "required": true
+    },
+    {
+      "id": "months",
+      "type": "number",
+      "label": "Loan Tenure (months)",
+      "placeholder": "Enter tenure in months",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "emi",
+      "type": "text",
+      "label": "Monthly EMI",
+      "format": "currency:2"
+    },
+    {
+      "id": "totalPayment",
+      "type": "text",
+      "label": "Total Payment",
+      "format": "currency:2"
+    },
+    {
+      "id": "totalInterest",
+      "type": "text",
+      "label": "Total Interest",
+      "format": "currency:2"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "emi-calculator"
+  },
+  "seo": {
+    "title": "EMI Calculator - Free Loan EMI Calculator",
+    "description": "Calculate Equated Monthly Installment (EMI) for loans. Essential for loan planning.",
+    "keywords": ["emi calculator", "loan emi", "monthly installment", "loan calculator"]
+  }
+}

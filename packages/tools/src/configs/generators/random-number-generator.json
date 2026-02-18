@@ -1,0 +1,61 @@
+{
+  "id": "random-number-generator",
+  "slug": "random-number-generator",
+  "name": "Random Number Generator",
+  "description": "Generate random numbers within a specified range. Perfect for games, contests, and statistical sampling.",
+  "shortDesc": "Generate random numbers",
+  "category": "generators",
+  "icon": "🎲",
+  "inputs": [
+    {
+      "id": "min",
+      "type": "number",
+      "label": "Minimum",
+      "placeholder": "Enter minimum value",
+      "required": true,
+      "defaultValue": 1
+    },
+    {
+      "id": "max",
+      "type": "number",
+      "label": "Maximum",
+      "placeholder": "Enter maximum value",
+      "required": true,
+      "defaultValue": 100
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Results",
+      "placeholder": "How many numbers?",
+      "required": true,
+      "defaultValue": 1,
+      "validation": {
+        "min": 1,
+        "max": 1000
+      }
+    },
+    {
+      "id": "unique",
+      "type": "checkbox",
+      "label": "Unique numbers only (no duplicates)",
+      "defaultValue": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "results",
+      "type": "text",
+      "label": "Generated Numbers"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "random-number-generator"
+  },
+  "seo": {
+    "title": "Random Number Generator - Free Random Number Tool",
+    "description": "Generate random numbers within a range. Great for games, contests, and random selection.",
+    "keywords": ["random number generator", "random number picker", "rng", "random integers"]
+  }
+}

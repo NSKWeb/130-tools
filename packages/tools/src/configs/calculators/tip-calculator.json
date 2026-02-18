@@ -1,0 +1,66 @@
+{
+  "id": "tip-calculator",
+  "slug": "tip-calculator",
+  "name": "Tip Calculator",
+  "description": "Calculate tips and split bills among friends. Perfect for restaurants, bars, and group dining.",
+  "shortDesc": "Calculate tips and split bills",
+  "category": "calculators",
+  "icon": "💵",
+  "inputs": [
+    {
+      "id": "billAmount",
+      "type": "number",
+      "label": "Bill Amount ($)",
+      "placeholder": "Enter bill amount",
+      "required": true
+    },
+    {
+      "id": "tipPercentage",
+      "type": "number",
+      "label": "Tip Percentage (%)",
+      "placeholder": "Enter tip percentage",
+      "required": true,
+      "defaultValue": 15
+    },
+    {
+      "id": "splitBetween",
+      "type": "number",
+      "label": "Split Between",
+      "placeholder": "Number of people",
+      "required": true,
+      "defaultValue": 1,
+      "validation": {
+        "min": 1
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "tipAmount",
+      "type": "text",
+      "label": "Tip Amount",
+      "format": "currency:2"
+    },
+    {
+      "id": "totalAmount",
+      "type": "text",
+      "label": "Total Amount",
+      "format": "currency:2"
+    },
+    {
+      "id": "perPerson",
+      "type": "text",
+      "label": "Per Person",
+      "format": "currency:2"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "tip-calculator"
+  },
+  "seo": {
+    "title": "Tip Calculator - Free Tip & Bill Split Calculator",
+    "description": "Calculate tips and split bills between friends. Perfect for restaurants and group dining.",
+    "keywords": ["tip calculator", "bill splitter", "split bill", "restaurant tip"]
+  }
+}

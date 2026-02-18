@@ -1,0 +1,45 @@
+{
+  "id": "reverse-text",
+  "slug": "reverse-text",
+  "name": "Reverse Text",
+  "description": "Reverse text strings and words. Useful for creating palindromes, testing, and creative purposes.",
+  "shortDesc": "Reverse text and words",
+  "category": "text-tools",
+  "icon": "🔄",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter text",
+      "placeholder": "Enter or paste your text...",
+      "required": true
+    },
+    {
+      "id": "mode",
+      "type": "select",
+      "label": "Mode",
+      "options": [
+        {"label": "Reverse Characters", "value": "chars"},
+        {"label": "Reverse Words", "value": "words"}
+      ],
+      "required": true,
+      "defaultValue": "chars"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Reversed Text"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "reverse-text"
+  },
+  "seo": {
+    "title": "Reverse Text - Free Text Reversal Tool",
+    "description": "Reverse text strings and words instantly. Perfect for creating palindromes and testing.",
+    "keywords": ["reverse text", "text reverser", "backward text", "flip text"]
+  }
+}

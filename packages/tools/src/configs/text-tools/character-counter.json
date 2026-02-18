@@ -1,0 +1,49 @@
+{
+  "id": "char-counter",
+  "slug": "character-counter",
+  "name": "Character Counter",
+  "description": "Count characters with and without spaces. Perfect for Twitter posts, SMS messages, and character-limited forms.",
+  "shortDesc": "Count characters with/without spaces",
+  "category": "text-tools",
+  "icon": "🔢",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter your text",
+      "placeholder": "Paste or type your text here...",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "chars",
+      "type": "number",
+      "label": "Characters (with spaces)"
+    },
+    {
+      "id": "charsNoSpaces",
+      "type": "number",
+      "label": "Characters (no spaces)"
+    },
+    {
+      "id": "spaces",
+      "type": "number",
+      "label": "Spaces"
+    },
+    {
+      "id": "newlines",
+      "type": "number",
+      "label": "Newlines"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "character-counter"
+  },
+  "seo": {
+    "title": "Character Counter - Free Character Count Tool",
+    "description": "Count characters with and without spaces. Perfect for Twitter, SMS, and character-limited forms.",
+    "keywords": ["character counter", "char count", "letter counter", "twitter character count"]
+  }
+}
