@@ -1,0 +1,76 @@
+{
+  "id": "currency-converter",
+  "slug": "currency-converter",
+  "name": "Currency Converter",
+  "description": "Convert currency amounts between major world currencies including USD, EUR, GBP, JPY, and more.",
+  "shortDesc": "Convert between currencies",
+  "category": "converters",
+  "icon": "💱",
+  "inputs": [
+    {
+      "id": "amount",
+      "type": "number",
+      "label": "Amount",
+      "placeholder": "Enter amount",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "US Dollar (USD)", "value": "USD"},
+        {"label": "Euro (EUR)", "value": "EUR"},
+        {"label": "British Pound (GBP)", "value": "GBP"},
+        {"label": "Japanese Yen (JPY)", "value": "JPY"},
+        {"label": "Australian Dollar (AUD)", "value": "AUD"},
+        {"label": "Canadian Dollar (CAD)", "value": "CAD"},
+        {"label": "Swiss Franc (CHF)", "value": "CHF"},
+        {"label": "Chinese Yuan (CNY)", "value": "CNY"}
+      ],
+      "required": true,
+      "defaultValue": "USD"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "US Dollar (USD)", "value": "USD"},
+        {"label": "Euro (EUR)", "value": "EUR"},
+        {"label": "British Pound (GBP)", "value": "GBP"},
+        {"label": "Japanese Yen (JPY)", "value": "JPY"},
+        {"label": "Australian Dollar (AUD)", "value": "AUD"},
+        {"label": "Canadian Dollar (CAD)", "value": "CAD"},
+        {"label": "Swiss Franc (CHF)", "value": "CHF"},
+        {"label": "Chinese Yuan (CNY)", "value": "CNY"}
+      ],
+      "required": true,
+      "defaultValue": "EUR"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Amount"
+    },
+    {
+      "id": "rate",
+      "type": "text",
+      "label": "Exchange Rate"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "currency-converter"
+  },
+  "seo": {
+    "title": "Currency Converter - Convert World Currencies",
+    "description": "Convert currency amounts between USD, EUR, GBP, JPY and other major currencies.",
+    "keywords": ["currency converter", "exchange rate", "usd to eur", "money converter"]
+  }
+}

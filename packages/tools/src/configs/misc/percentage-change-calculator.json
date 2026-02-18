@@ -1,0 +1,54 @@
+{
+  "id": "percentage-change-calculator",
+  "slug": "percentage-change-calculator",
+  "name": "Percentage Change Calculator",
+  "description": "Calculate percentage increase or decrease between two values.",
+  "shortDesc": "Calculate percentage change",
+  "category": "misc",
+  "icon": "📈",
+  "inputs": [
+    {
+      "id": "originalValue",
+      "type": "number",
+      "label": "Original Value",
+      "placeholder": "Enter original value",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "newValue",
+      "type": "number",
+      "label": "New Value",
+      "placeholder": "Enter new value",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "change",
+      "type": "text",
+      "label": "Percentage Change"
+    },
+    {
+      "id": "direction",
+      "type": "text",
+      "label": "Direction"
+    },
+    {
+      "id": "difference",
+      "type": "text",
+      "label": "Absolute Difference"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "percentage-change-calculator"
+  },
+  "seo": {
+    "title": "Percentage Change Calculator",
+    "description": "Calculate percentage increase or decrease between two values.",
+    "keywords": ["percentage change", "percent change calculator", "percentage difference", "percent increase"]
+  }
+}

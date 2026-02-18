@@ -1,0 +1,49 @@
+{
+  "id": "coin-flip",
+  "slug": "coin-flip",
+  "name": "Coin Flipper",
+  "description": "Flip a virtual coin for random heads or tails results.",
+  "shortDesc": "Flip a virtual coin",
+  "category": "misc",
+  "icon": "🪙",
+  "inputs": [
+    {
+      "id": "flips",
+      "type": "number",
+      "label": "Number of Flips",
+      "placeholder": "How many flips?",
+      "required": true,
+      "defaultValue": 1,
+      "validation": {
+        "min": 1,
+        "max": 100
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "results",
+      "type": "text",
+      "label": "Results"
+    },
+    {
+      "id": "heads",
+      "type": "text",
+      "label": "Heads Count"
+    },
+    {
+      "id": "tails",
+      "type": "text",
+      "label": "Tails Count"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "coin-flip"
+  },
+  "seo": {
+    "title": "Coin Flipper - Flip a Virtual Coin",
+    "description": "Flip a virtual coin for random heads or tails. Flip multiple coins at once.",
+    "keywords": ["coin flip", "flip a coin", "coin toss", "random coin"]
+  }
+}

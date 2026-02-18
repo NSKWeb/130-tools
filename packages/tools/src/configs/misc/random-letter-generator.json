@@ -1,0 +1,51 @@
+{
+  "id": "random-letter-generator",
+  "slug": "random-letter-generator",
+  "name": "Random Letter Generator",
+  "description": "Generate random letters for games, passwords, and testing.",
+  "shortDesc": "Generate random letters",
+  "category": "misc",
+  "icon": "🔤",
+  "inputs": [
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Letters",
+      "placeholder": "How many letters?",
+      "required": true,
+      "defaultValue": 10,
+      "validation": {
+        "min": 1,
+        "max": 1000
+      }
+    },
+    {
+      "id": "uppercase",
+      "type": "checkbox",
+      "label": "Uppercase only",
+      "defaultValue": false
+    },
+    {
+      "id": "unique",
+      "type": "checkbox",
+      "label": "Unique letters only",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "letters",
+      "type": "text",
+      "label": "Generated Letters"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "random-letter-generator"
+  },
+  "seo": {
+    "title": "Random Letter Generator - Generate Random Letters",
+    "description": "Generate random letters for games, passwords, and testing purposes.",
+    "keywords": ["random letter generator", "random letters", "letter generator", "alphabet generator"]
+  }
+}

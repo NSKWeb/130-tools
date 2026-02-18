@@ -1,0 +1,70 @@
+{
+  "id": "coupon-generator",
+  "slug": "coupon-generator",
+  "name": "Coupon Code Generator",
+  "description": "Generate random coupon codes with customizable formats.",
+  "shortDesc": "Generate coupon codes",
+  "category": "generators",
+  "icon": "🎫",
+  "inputs": [
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Codes",
+      "placeholder": "How many codes?",
+      "required": true,
+      "defaultValue": 10,
+      "validation": {
+        "min": 1,
+        "max": 1000
+      }
+    },
+    {
+      "id": "length",
+      "type": "number",
+      "label": "Code Length",
+      "placeholder": "Code length",
+      "required": true,
+      "defaultValue": 8,
+      "validation": {
+        "min": 4,
+        "max": 20
+      }
+    },
+    {
+      "id": "prefix",
+      "type": "text",
+      "label": "Prefix (optional)",
+      "placeholder": "e.g., SUMMER",
+      "required": false
+    },
+    {
+      "id": "uppercase",
+      "type": "checkbox",
+      "label": "Uppercase only",
+      "defaultValue": true
+    },
+    {
+      "id": "numbers",
+      "type": "checkbox",
+      "label": "Include numbers",
+      "defaultValue": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "codes",
+      "type": "textarea",
+      "label": "Coupon Codes"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "coupon-generator"
+  },
+  "seo": {
+    "title": "Coupon Code Generator - Generate Discount Codes",
+    "description": "Generate random coupon codes with customizable format and length.",
+    "keywords": ["coupon generator", "coupon codes", "discount codes", "promo codes"]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "number-base-converter",
+  "slug": "number-base-converter",
+  "name": "Number Base Converter",
+  "description": "Convert numbers between different bases including binary, octal, decimal, and hexadecimal.",
+  "shortDesc": "Convert number bases",
+  "category": "converters",
+  "icon": "🔢",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "text",
+      "label": "Number",
+      "placeholder": "Enter number",
+      "required": true
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From Base",
+      "options": [
+        {"label": "Binary (Base 2)", "value": 2},
+        {"label": "Octal (Base 8)", "value": 8},
+        {"label": "Decimal (Base 10)", "value": 10},
+        {"label": "Hexadecimal (Base 16)", "value": 16}
+      ],
+      "required": true,
+      "defaultValue": 10
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To Base",
+      "options": [
+        {"label": "Binary (Base 2)", "value": 2},
+        {"label": "Octal (Base 8)", "value": 8},
+        {"label": "Decimal (Base 10)", "value": 10},
+        {"label": "Hexadecimal (Base 16)", "value": 16}
+      ],
+      "required": true,
+      "defaultValue": 16
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Number"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "number-base-converter"
+  },
+  "seo": {
+    "title": "Number Base Converter - Convert Between Bases",
+    "description": "Convert numbers between binary, octal, decimal, and hexadecimal number systems.",
+    "keywords": ["number base converter", "binary to decimal", "hex converter", "base conversion"]
+  }
+}

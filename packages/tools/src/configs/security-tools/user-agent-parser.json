@@ -1,0 +1,49 @@
+{
+  "id": "user-agent-parser",
+  "slug": "user-agent-parser",
+  "name": "User Agent Parser",
+  "description": "Parse user agent strings to extract browser, OS, and device information.",
+  "shortDesc": "Parse user agent strings",
+  "category": "security-tools",
+  "icon": "🔍",
+  "inputs": [
+    {
+      "id": "userAgent",
+      "type": "text",
+      "label": "User Agent String",
+      "placeholder": "Paste user agent string...",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "browser",
+      "type": "text",
+      "label": "Browser"
+    },
+    {
+      "id": "os",
+      "type": "text",
+      "label": "Operating System"
+    },
+    {
+      "id": "device",
+      "type": "text",
+      "label": "Device Type"
+    },
+    {
+      "id": "engine",
+      "type": "text",
+      "label": "Browser Engine"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "user-agent-parser"
+  },
+  "seo": {
+    "title": "User Agent Parser - Parse Browser Info",
+    "description": "Parse user agent strings to extract browser, OS, and device information.",
+    "keywords": ["user agent parser", "parse user agent", "browser detection", "ua parser"]
+  }
+}

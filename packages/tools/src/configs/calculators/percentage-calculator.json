@@ -1,0 +1,64 @@
+{
+  "id": "percentage-calculator",
+  "slug": "percentage-calculator",
+  "name": "Percentage Calculator",
+  "description": "Calculate percentages, what percent one number is of another, and percentage changes.",
+  "shortDesc": "Calculate percentages easily",
+  "category": "calculators",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "calculation",
+      "type": "select",
+      "label": "Calculation Type",
+      "options": [
+        {"label": "X% of Y", "value": "of"},
+        {"label": "X is what % of Y", "value": "is-what"},
+        {"label": "Percentage Change from X to Y", "value": "change"}
+      ],
+      "required": true,
+      "defaultValue": "of"
+    },
+    {
+      "id": "x",
+      "type": "number",
+      "label": "X",
+      "placeholder": "Enter first number",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "y",
+      "type": "number",
+      "label": "Y",
+      "placeholder": "Enter second number",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Result"
+    },
+    {
+      "id": "formula",
+      "type": "text",
+      "label": "Formula"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "percentage-calculator"
+  },
+  "seo": {
+    "title": "Percentage Calculator - Calculate Percentages Instantly",
+    "description": "Calculate any percentage, what percent one number is of another, and percentage changes easily.",
+    "keywords": ["percentage calculator", "percent calculator", "calculate percentage", "percentage of"]
+  }
+}

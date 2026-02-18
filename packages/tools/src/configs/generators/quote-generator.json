@@ -1,0 +1,54 @@
+{
+  "id": "quote-generator",
+  "slug": "quote-generator",
+  "name": "Quote Generator",
+  "description": "Generate random inspirational and motivational quotes.",
+  "shortDesc": "Generate inspirational quotes",
+  "category": "generators",
+  "icon": "💬",
+  "inputs": [
+    {
+      "id": "category",
+      "type": "select",
+      "label": "Category",
+      "options": [
+        {"label": "Inspirational", "value": "inspirational"},
+        {"label": "Motivational", "value": "motivational"},
+        {"label": "Success", "value": "success"},
+        {"label": "Life", "value": "life"},
+        {"label": "Wisdom", "value": "wisdom"},
+        {"label": "Random", "value": "random"}
+      ],
+      "required": true,
+      "defaultValue": "random"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Quotes",
+      "placeholder": "How many quotes?",
+      "required": true,
+      "defaultValue": 1,
+      "validation": {
+        "min": 1,
+        "max": 10
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "quotes",
+      "type": "json",
+      "label": "Quotes"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "quote-generator"
+  },
+  "seo": {
+    "title": "Quote Generator - Generate Inspirational Quotes",
+    "description": "Generate random inspirational and motivational quotes for any purpose.",
+    "keywords": ["quote generator", "inspirational quotes", "motivational quotes", "random quotes"]
+  }
+}

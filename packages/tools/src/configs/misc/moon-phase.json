@@ -1,0 +1,49 @@
+{
+  "id": "moon-phase",
+  "slug": "moon-phase",
+  "name": "Moon Phase Calculator",
+  "description": "Calculate the current moon phase and illumination for any date.",
+  "shortDesc": "Calculate moon phase",
+  "category": "misc",
+  "icon": "🌙",
+  "inputs": [
+    {
+      "id": "date",
+      "type": "date",
+      "label": "Date",
+      "placeholder": "Select date",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "phase",
+      "type": "text",
+      "label": "Moon Phase"
+    },
+    {
+      "id": "illumination",
+      "type": "text",
+      "label": "Illumination"
+    },
+    {
+      "id": "age",
+      "type": "text",
+      "label": "Moon Age"
+    },
+    {
+      "id": "emoji",
+      "type": "text",
+      "label": "Phase Emoji"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "moon-phase"
+  },
+  "seo": {
+    "title": "Moon Phase Calculator - Current Moon Phase",
+    "description": "Calculate the current moon phase and illumination percentage.",
+    "keywords": ["moon phase", "moon calculator", "lunar phase", "moon calendar"]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "credit-card-payoff-calculator",
+  "slug": "credit-card-payoff-calculator",
+  "name": "Credit Card Payoff Calculator",
+  "description": "Calculate how long it will take to pay off your credit card and total interest paid.",
+  "shortDesc": "Calculate credit card payoff time",
+  "category": "calculators",
+  "icon": "💳",
+  "inputs": [
+    {
+      "id": "balance",
+      "type": "number",
+      "label": "Credit Card Balance ($)",
+      "placeholder": "Enter balance",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "interestRate",
+      "type": "number",
+      "label": "Annual Interest Rate (%)",
+      "placeholder": "Enter APR",
+      "required": true,
+      "defaultValue": 18.9,
+      "validation": {
+        "min": 0,
+        "max": 40
+      }
+    },
+    {
+      "id": "monthlyPayment",
+      "type": "number",
+      "label": "Monthly Payment ($)",
+      "placeholder": "Enter monthly payment",
+      "required": true,
+      "validation": {
+        "min": 1
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthsToPayoff",
+      "type": "text",
+      "label": "Months to Payoff"
+    },
+    {
+      "id": "yearsToPayoff",
+      "type": "text",
+      "label": "Years to Payoff"
+    },
+    {
+      "id": "totalInterest",
+      "type": "text",
+      "label": "Total Interest Paid"
+    },
+    {
+      "id": "totalPaid",
+      "type": "text",
+      "label": "Total Amount Paid"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "credit-card-payoff-calculator"
+  },
+  "seo": {
+    "title": "Credit Card Payoff Calculator - Plan Your Debt Repayment",
+    "description": "Calculate how long it will take to pay off your credit card debt and total interest.",
+    "keywords": ["credit card payoff calculator", "debt calculator", "credit card debt", "loan payoff"]
+  }
+}

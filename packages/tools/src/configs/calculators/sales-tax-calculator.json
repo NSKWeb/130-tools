@@ -1,0 +1,54 @@
+{
+  "id": "sales-tax-calculator",
+  "slug": "sales-tax-calculator",
+  "name": "Sales Tax Calculator",
+  "description": "Calculate sales tax and final price from pre-tax amount and tax rate.",
+  "shortDesc": "Calculate sales tax",
+  "category": "calculators",
+  "icon": "🧾",
+  "inputs": [
+    {
+      "id": "price",
+      "type": "number",
+      "label": "Price Before Tax ($)",
+      "placeholder": "Enter price",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "taxRate",
+      "type": "number",
+      "label": "Sales Tax Rate (%)",
+      "placeholder": "Enter tax rate",
+      "required": true,
+      "defaultValue": 8.25,
+      "validation": {
+        "min": 0,
+        "max": 25
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "taxAmount",
+      "type": "text",
+      "label": "Sales Tax"
+    },
+    {
+      "id": "totalPrice",
+      "type": "text",
+      "label": "Total Price"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "sales-tax-calculator"
+  },
+  "seo": {
+    "title": "Sales Tax Calculator - Calculate Sales Tax",
+    "description": "Calculate sales tax amount and total price from pre-tax amount and tax rate.",
+    "keywords": ["sales tax calculator", "tax calculator", "sales tax", "price calculator"]
+  }
+}

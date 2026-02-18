@@ -1,0 +1,47 @@
+{
+  "id": "html-formatter",
+  "slug": "html-formatter",
+  "name": "HTML Formatter",
+  "description": "Format, beautify, and indent HTML code for better readability.",
+  "shortDesc": "Format HTML code",
+  "category": "developer-tools",
+  "icon": "🌐",
+  "inputs": [
+    {
+      "id": "html",
+      "type": "textarea",
+      "label": "Enter HTML",
+      "placeholder": "Paste your HTML code here...",
+      "required": true,
+      "rows": 15
+    },
+    {
+      "id": "indentSize",
+      "type": "number",
+      "label": "Indent Size",
+      "placeholder": "Spaces per indent",
+      "required": true,
+      "defaultValue": 2,
+      "validation": {
+        "min": 1,
+        "max": 8
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Formatted HTML"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "html-formatter"
+  },
+  "seo": {
+    "title": "HTML Formatter - Beautify HTML Code",
+    "description": "Format and beautify HTML code with proper indentation for better readability.",
+    "keywords": ["html formatter", "html beautifier", "format html", "pretty print html"]
+  }
+}

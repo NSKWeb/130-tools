@@ -1,0 +1,77 @@
+{
+  "id": "receipt-generator",
+  "slug": "receipt-generator",
+  "name": "Receipt Generator",
+  "description": "Generate professional receipts for payments and transactions.",
+  "shortDesc": "Create receipts",
+  "category": "generators",
+  "icon": "🧾",
+  "inputs": [
+    {
+      "id": "businessName",
+      "type": "text",
+      "label": "Business Name",
+      "placeholder": "Business name",
+      "required": true
+    },
+    {
+      "id": "customerName",
+      "type": "text",
+      "label": "Customer Name",
+      "placeholder": "Customer name",
+      "required": true
+    },
+    {
+      "id": "amount",
+      "type": "number",
+      "label": "Amount ($)",
+      "placeholder": "Amount",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "description",
+      "type": "text",
+      "label": "Description",
+      "placeholder": "Payment description",
+      "required": true
+    },
+    {
+      "id": "paymentMethod",
+      "type": "select",
+      "label": "Payment Method",
+      "options": [
+        {"label": "Cash", "value": "cash"},
+        {"label": "Credit Card", "value": "credit_card"},
+        {"label": "Debit Card", "value": "debit_card"},
+        {"label": "Bank Transfer", "value": "bank_transfer"},
+        {"label": "Check", "value": "check"}
+      ],
+      "required": true,
+      "defaultValue": "cash"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "receipt",
+      "type": "json",
+      "label": "Receipt Data"
+    },
+    {
+      "id": "receiptNumber",
+      "type": "text",
+      "label": "Receipt Number"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "receipt-generator"
+  },
+  "seo": {
+    "title": "Receipt Generator - Create Payment Receipts",
+    "description": "Generate professional payment receipts for any transaction.",
+    "keywords": ["receipt generator", "create receipt", "payment receipt", "receipt template"]
+  }
+}

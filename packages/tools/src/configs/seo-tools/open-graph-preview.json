@@ -1,0 +1,56 @@
+{
+  "id": "open-graph-preview",
+  "slug": "open-graph-preview",
+  "name": "Open Graph Preview",
+  "description": "Preview how your content will appear when shared on social media platforms.",
+  "shortDesc": "Preview social media shares",
+  "category": "seo-tools",
+  "icon": "📱",
+  "inputs": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "OG Title",
+      "placeholder": "Enter Open Graph title",
+      "required": true
+    },
+    {
+      "id": "description",
+      "type": "textarea",
+      "label": "OG Description",
+      "placeholder": "Enter Open Graph description",
+      "required": true,
+      "rows": 3
+    },
+    {
+      "id": "image",
+      "type": "text",
+      "label": "OG Image URL",
+      "placeholder": "https://example.com/image.jpg",
+      "required": false
+    },
+    {
+      "id": "url",
+      "type": "text",
+      "label": "Page URL",
+      "placeholder": "https://example.com/page",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "preview",
+      "type": "text",
+      "label": "Open Graph Preview"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "open-graph-preview"
+  },
+  "seo": {
+    "title": "Open Graph Preview - Social Media Share Preview",
+    "description": "Preview how your content will appear when shared on Facebook, LinkedIn, and other platforms.",
+    "keywords": ["open graph preview", "social media preview", "og preview", "share preview"]
+  }
+}

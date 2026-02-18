@@ -1,0 +1,52 @@
+{
+  "id": "internal-link-analyzer",
+  "slug": "internal-link-analyzer",
+  "name": "Internal Link Analyzer",
+  "description": "Analyze internal links in your content for SEO structure.",
+  "shortDesc": "Analyze internal links",
+  "category": "seo-tools",
+  "icon": "🔗",
+  "inputs": [
+    {
+      "id": "html",
+      "type": "textarea",
+      "label": "HTML Content",
+      "placeholder": "Paste your HTML content...",
+      "required": true,
+      "rows": 15
+    },
+    {
+      "id": "domain",
+      "type": "text",
+      "label": "Your Domain",
+      "placeholder": "example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "internalLinks",
+      "type": "text",
+      "label": "Internal Links"
+    },
+    {
+      "id": "externalLinks",
+      "type": "text",
+      "label": "External Links"
+    },
+    {
+      "id": "brokenLinks",
+      "type": "json",
+      "label": "Potential Issues"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "internal-link-analyzer"
+  },
+  "seo": {
+    "title": "Internal Link Analyzer - Analyze Link Structure",
+    "description": "Analyze internal and external links in your content for SEO optimization.",
+    "keywords": ["internal link analyzer", "link analysis", "seo links", "check links"]
+  }
+}

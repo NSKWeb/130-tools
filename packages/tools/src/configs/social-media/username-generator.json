@@ -1,0 +1,60 @@
+{
+  "id": "username-generator",
+  "slug": "username-generator",
+  "name": "Username Generator",
+  "description": "Generate unique usernames for social media and gaming.",
+  "shortDesc": "Generate unique usernames",
+  "category": "social-media",
+  "icon": "👤",
+  "inputs": [
+    {
+      "id": "keyword",
+      "type": "text",
+      "label": "Keyword or Name",
+      "placeholder": "Enter your name or keyword",
+      "required": true
+    },
+    {
+      "id": "style",
+      "type": "select",
+      "label": "Username Style",
+      "options": [
+        {"label": "Professional", "value": "professional"},
+        {"label": "Fun & Creative", "value": "fun"},
+        {"label": "Gamer", "value": "gamer"},
+        {"label": "Minimalist", "value": "minimalist"},
+        {"label": "Mixed", "value": "mixed"}
+      ],
+      "required": true,
+      "defaultValue": "mixed"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Usernames",
+      "placeholder": "How many usernames?",
+      "required": true,
+      "defaultValue": 10,
+      "validation": {
+        "min": 1,
+        "max": 50
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "usernames",
+      "type": "text",
+      "label": "Generated Usernames"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "username-generator"
+  },
+  "seo": {
+    "title": "Username Generator - Generate Unique Usernames",
+    "description": "Generate unique and creative usernames for social media and gaming platforms.",
+    "keywords": ["username generator", "username ideas", "create username", "unique username"]
+  }
+}

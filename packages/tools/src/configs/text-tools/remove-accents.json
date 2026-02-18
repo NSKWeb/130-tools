@@ -1,0 +1,35 @@
+{
+  "id": "remove-accents",
+  "slug": "remove-accents",
+  "name": "Remove Accents",
+  "description": "Remove diacritics and accents from text, converting characters to their ASCII equivalents.",
+  "shortDesc": "Remove text accents",
+  "category": "text-tools",
+  "icon": "â",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Paste text with accents here...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Text Without Accents"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "remove-accents"
+  },
+  "seo": {
+    "title": "Remove Accents - Strip Diacritics from Text",
+    "description": "Remove accents and diacritics from text, converting to plain ASCII characters.",
+    "keywords": ["remove accents", "strip accents", "remove diacritics", "accent remover"]
+  }
+}

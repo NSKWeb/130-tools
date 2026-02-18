@@ -1,0 +1,45 @@
+{
+  "id": "roman-numeral-converter",
+  "slug": "roman-numeral-converter",
+  "name": "Roman Numeral Converter",
+  "description": "Convert between Roman numerals and standard numbers.",
+  "shortDesc": "Convert Roman numerals",
+  "category": "converters",
+  "icon": "🏛️",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "text",
+      "label": "Enter Number or Roman Numeral",
+      "placeholder": "e.g., 2024 or MMXXIV",
+      "required": true
+    },
+    {
+      "id": "direction",
+      "type": "select",
+      "label": "Convert To",
+      "options": [
+        {"label": "Roman Numeral", "value": "to-roman"},
+        {"label": "Number", "value": "to-number"}
+      ],
+      "required": true,
+      "defaultValue": "to-roman"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Result"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "roman-numeral-converter"
+  },
+  "seo": {
+    "title": "Roman Numeral Converter - Convert to/from Roman Numerals",
+    "description": "Convert between Roman numerals and standard numbers instantly.",
+    "keywords": ["roman numeral converter", "roman numerals", "number to roman", "roman to number"]
+  }
+}

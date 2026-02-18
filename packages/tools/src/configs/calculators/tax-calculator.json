@@ -1,0 +1,71 @@
+{
+  "id": "tax-calculator",
+  "slug": "tax-calculator",
+  "name": "Tax Calculator",
+  "description": "Calculate income tax based on annual income, filing status, and tax brackets.",
+  "shortDesc": "Calculate income tax",
+  "category": "calculators",
+  "icon": "💰",
+  "inputs": [
+    {
+      "id": "income",
+      "type": "number",
+      "label": "Annual Income ($)",
+      "placeholder": "Enter annual income",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "filingStatus",
+      "type": "select",
+      "label": "Filing Status",
+      "options": [
+        {"label": "Single", "value": "single"},
+        {"label": "Married Filing Jointly", "value": "married_joint"},
+        {"label": "Married Filing Separately", "value": "married_sep"},
+        {"label": "Head of Household", "value": "head_household"}
+      ],
+      "required": true,
+      "defaultValue": "single"
+    },
+    {
+      "id": "deductions",
+      "type": "number",
+      "label": "Standard Deduction ($)",
+      "placeholder": "Enter deductions",
+      "required": false,
+      "defaultValue": 13850,
+      "validation": {
+        "min": 0
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "taxableIncome",
+      "type": "text",
+      "label": "Taxable Income"
+    },
+    {
+      "id": "federalTax",
+      "type": "text",
+      "label": "Federal Tax"
+    },
+    {
+      "id": "effectiveRate",
+      "type": "text",
+      "label": "Effective Rate"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "tax-calculator"
+  },
+  "seo": {
+    "title": "Tax Calculator - Calculate Federal Income Tax",
+    "description": "Calculate your federal income tax based on annual income and filing status.",
+    "keywords": ["tax calculator", "income tax calculator", "federal tax", "tax brackets"]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "breakeven-calculator",
+  "slug": "breakeven-calculator",
+  "name": "Break-Even Calculator",
+  "description": "Calculate the break-even point where total revenue equals total costs.",
+  "shortDesc": "Calculate break-even point",
+  "category": "calculators",
+  "icon": "⚖️",
+  "inputs": [
+    {
+      "id": "fixedCosts",
+      "type": "number",
+      "label": "Fixed Costs ($)",
+      "placeholder": "Enter fixed costs",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "variableCostPerUnit",
+      "type": "number",
+      "label": "Variable Cost per Unit ($)",
+      "placeholder": "Enter variable cost per unit",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "pricePerUnit",
+      "type": "number",
+      "label": "Price per Unit ($)",
+      "placeholder": "Enter selling price per unit",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "breakevenUnits",
+      "type": "text",
+      "label": "Break-Even Units"
+    },
+    {
+      "id": "breakevenRevenue",
+      "type": "text",
+      "label": "Break-Even Revenue"
+    },
+    {
+      "id": "contributionMargin",
+      "type": "text",
+      "label": "Contribution Margin per Unit"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "breakeven-calculator"
+  },
+  "seo": {
+    "title": "Break-Even Calculator - Find Your Break-Even Point",
+    "description": "Calculate the break-even point where revenue equals costs for your business.",
+    "keywords": ["breakeven calculator", "break even analysis", "business calculator", "profit analysis"]
+  }
+}

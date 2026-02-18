@@ -1,0 +1,71 @@
+{
+  "id": "length-converter",
+  "slug": "length-converter",
+  "name": "Length Converter",
+  "description": "Convert length measurements between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles.",
+  "shortDesc": "Convert between length units",
+  "category": "converters",
+  "icon": "📏",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Millimeters (mm)", "value": "mm"},
+        {"label": "Centimeters (cm)", "value": "cm"},
+        {"label": "Meters (m)", "value": "m"},
+        {"label": "Kilometers (km)", "value": "km"},
+        {"label": "Inches (in)", "value": "in"},
+        {"label": "Feet (ft)", "value": "ft"},
+        {"label": "Yards (yd)", "value": "yd"},
+        {"label": "Miles (mi)", "value": "mi"}
+      ],
+      "required": true,
+      "defaultValue": "m"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Millimeters (mm)", "value": "mm"},
+        {"label": "Centimeters (cm)", "value": "cm"},
+        {"label": "Meters (m)", "value": "m"},
+        {"label": "Kilometers (km)", "value": "km"},
+        {"label": "Inches (in)", "value": "in"},
+        {"label": "Feet (ft)", "value": "ft"},
+        {"label": "Yards (yd)", "value": "yd"},
+        {"label": "Miles (mi)", "value": "mi"}
+      ],
+      "required": true,
+      "defaultValue": "ft"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "json",
+      "label": "Conversions"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "length-converter"
+  },
+  "seo": {
+    "title": "Length Converter - Convert Units of Length",
+    "description": "Convert length between mm, cm, m, km, inches, feet, yards, and miles instantly.",
+    "keywords": ["length converter", "unit converter", "meters to feet", "cm to inches"]
+  }
+}

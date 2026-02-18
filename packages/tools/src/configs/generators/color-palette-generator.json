@@ -1,0 +1,61 @@
+{
+  "id": "color-palette-generator",
+  "slug": "color-palette-generator",
+  "name": "Color Palette Generator",
+  "description": "Generate beautiful color palettes for your design projects.",
+  "shortDesc": "Generate color palettes",
+  "category": "generators",
+  "icon": "🎨",
+  "inputs": [
+    {
+      "id": "baseColor",
+      "type": "color",
+      "label": "Base Color",
+      "placeholder": "Pick a base color",
+      "required": true,
+      "defaultValue": "#3b82f6"
+    },
+    {
+      "id": "scheme",
+      "type": "select",
+      "label": "Color Scheme",
+      "options": [
+        {"label": "Analogous", "value": "analogous"},
+        {"label": "Complementary", "value": "complementary"},
+        {"label": "Triadic", "value": "triadic"},
+        {"label": "Split Complementary", "value": "split-complementary"},
+        {"label": "Monochromatic", "value": "monochromatic"}
+      ],
+      "required": true,
+      "defaultValue": "complementary"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Colors",
+      "placeholder": "Colors in palette",
+      "required": true,
+      "defaultValue": 5,
+      "validation": {
+        "min": 2,
+        "max": 10
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "palette",
+      "type": "json",
+      "label": "Color Palette"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "color-palette-generator"
+  },
+  "seo": {
+    "title": "Color Palette Generator - Create Beautiful Palettes",
+    "description": "Generate beautiful color palettes using various color harmony schemes.",
+    "keywords": ["color palette generator", "color scheme", "palette creator", "design colors"]
+  }
+}

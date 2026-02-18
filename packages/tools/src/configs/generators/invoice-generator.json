@@ -1,0 +1,83 @@
+{
+  "id": "invoice-generator",
+  "slug": "invoice-generator",
+  "name": "Invoice Generator",
+  "description": "Generate professional invoices with line items, taxes, and calculations.",
+  "shortDesc": "Create invoices",
+  "category": "generators",
+  "icon": "📄",
+  "inputs": [
+    {
+      "id": "businessName",
+      "type": "text",
+      "label": "Business Name",
+      "placeholder": "Your business name",
+      "required": true
+    },
+    {
+      "id": "clientName",
+      "type": "text",
+      "label": "Client Name",
+      "placeholder": "Client name",
+      "required": true
+    },
+    {
+      "id": "invoiceNumber",
+      "type": "text",
+      "label": "Invoice Number",
+      "placeholder": "INV-001",
+      "required": true
+    },
+    {
+      "id": "items",
+      "type": "textarea",
+      "label": "Items (one per line: description, quantity, price)",
+      "placeholder": "Service 1, 1, 100\nService 2, 2, 50",
+      "required": true,
+      "rows": 6
+    },
+    {
+      "id": "taxRate",
+      "type": "number",
+      "label": "Tax Rate (%)",
+      "placeholder": "Tax rate",
+      "required": true,
+      "defaultValue": 0,
+      "validation": {
+        "min": 0,
+        "max": 100
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "invoice",
+      "type": "json",
+      "label": "Invoice Data"
+    },
+    {
+      "id": "subtotal",
+      "type": "text",
+      "label": "Subtotal"
+    },
+    {
+      "id": "tax",
+      "type": "text",
+      "label": "Tax"
+    },
+    {
+      "id": "total",
+      "type": "text",
+      "label": "Total"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "invoice-generator"
+  },
+  "seo": {
+    "title": "Invoice Generator - Create Professional Invoices",
+    "description": "Generate professional invoices with line items, tax calculations, and totals.",
+    "keywords": ["invoice generator", "create invoice", "invoice template", "free invoice"]
+  }
+}

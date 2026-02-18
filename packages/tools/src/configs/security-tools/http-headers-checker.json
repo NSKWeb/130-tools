@@ -1,0 +1,44 @@
+{
+  "id": "http-headers-checker",
+  "slug": "http-headers-checker",
+  "name": "HTTP Headers Checker",
+  "description": "Check HTTP response headers for any website.",
+  "shortDesc": "Check HTTP headers",
+  "category": "security-tools",
+  "icon": "📡",
+  "inputs": [
+    {
+      "id": "url",
+      "type": "text",
+      "label": "Website URL",
+      "placeholder": "https://example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "headers",
+      "type": "json",
+      "label": "HTTP Headers"
+    },
+    {
+      "id": "status",
+      "type": "text",
+      "label": "Status Code"
+    },
+    {
+      "id": "securityHeaders",
+      "type": "json",
+      "label": "Security Headers"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "http-headers-checker"
+  },
+  "seo": {
+    "title": "HTTP Headers Checker - View Response Headers",
+    "description": "Check HTTP response headers for any website including security headers.",
+    "keywords": ["http headers checker", "response headers", "http headers", "check headers"]
+  }
+}

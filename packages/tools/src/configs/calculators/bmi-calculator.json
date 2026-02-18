@@ -1,0 +1,54 @@
+{
+  "id": "bmi-calculator",
+  "slug": "bmi-calculator",
+  "name": "BMI Calculator",
+  "description": "Calculate your Body Mass Index (BMI) and determine if you're underweight, normal, overweight, or obese.",
+  "shortDesc": "Calculate Body Mass Index",
+  "category": "calculators",
+  "icon": "⚖️",
+  "inputs": [
+    {
+      "id": "weight",
+      "type": "number",
+      "label": "Weight (kg)",
+      "placeholder": "Enter your weight in kg",
+      "required": true,
+      "validation": {
+        "min": 20,
+        "max": 300
+      }
+    },
+    {
+      "id": "height",
+      "type": "number",
+      "label": "Height (cm)",
+      "placeholder": "Enter your height in cm",
+      "required": true,
+      "validation": {
+        "min": 100,
+        "max": 250
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bmi",
+      "type": "text",
+      "label": "BMI"
+    },
+    {
+      "id": "category",
+      "type": "text",
+      "label": "Category"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "bmi-calculator"
+  },
+  "seo": {
+    "title": "BMI Calculator - Calculate Your Body Mass Index",
+    "description": "Free BMI calculator to determine if your weight is healthy. Get instant results with category classification.",
+    "keywords": ["bmi calculator", "body mass index", "healthy weight calculator", "bmi chart"]
+  }
+}

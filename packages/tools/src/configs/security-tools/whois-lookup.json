@@ -1,0 +1,54 @@
+{
+  "id": "whois-lookup",
+  "slug": "whois-lookup",
+  "name": "WHOIS Lookup",
+  "description": "Lookup domain registration information using WHOIS protocol.",
+  "shortDesc": "Lookup domain info",
+  "category": "security-tools",
+  "icon": "🔎",
+  "inputs": [
+    {
+      "id": "domain",
+      "type": "text",
+      "label": "Domain Name",
+      "placeholder": "example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "registrar",
+      "type": "text",
+      "label": "Registrar"
+    },
+    {
+      "id": "created",
+      "type": "text",
+      "label": "Created Date"
+    },
+    {
+      "id": "expires",
+      "type": "text",
+      "label": "Expires Date"
+    },
+    {
+      "id": "status",
+      "type": "text",
+      "label": "Status"
+    },
+    {
+      "id": "nameServers",
+      "type": "text",
+      "label": "Name Servers"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "whois-lookup"
+  },
+  "seo": {
+    "title": "WHOIS Lookup - Check Domain Registration",
+    "description": "Lookup WHOIS domain registration information for any domain.",
+    "keywords": ["whois lookup", "domain lookup", "whois search", "domain info"]
+  }
+}

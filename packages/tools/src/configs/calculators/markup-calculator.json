@@ -1,0 +1,58 @@
+{
+  "id": "markup-calculator",
+  "slug": "markup-calculator",
+  "name": "Markup Calculator",
+  "description": "Calculate selling price based on cost and desired markup percentage.",
+  "shortDesc": "Calculate markup and selling price",
+  "category": "calculators",
+  "icon": "🏷️",
+  "inputs": [
+    {
+      "id": "cost",
+      "type": "number",
+      "label": "Cost Price ($)",
+      "placeholder": "Enter cost price",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "markup",
+      "type": "number",
+      "label": "Markup Percentage (%)",
+      "placeholder": "Enter markup percentage",
+      "required": true,
+      "validation": {
+        "min": 0,
+        "max": 1000
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sellingPrice",
+      "type": "text",
+      "label": "Selling Price"
+    },
+    {
+      "id": "markupAmount",
+      "type": "text",
+      "label": "Markup Amount"
+    },
+    {
+      "id": "grossMargin",
+      "type": "text",
+      "label": "Gross Margin"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "markup-calculator"
+  },
+  "seo": {
+    "title": "Markup Calculator - Calculate Selling Price",
+    "description": "Calculate selling price, markup amount, and gross margin based on cost and markup percentage.",
+    "keywords": ["markup calculator", "selling price calculator", "gross margin", "pricing calculator"]
+  }
+}

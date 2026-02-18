@@ -1,0 +1,68 @@
+{
+  "id": "timestamp-generator",
+  "slug": "timestamp-generator",
+  "name": "Timestamp Generator",
+  "description": "Generate Unix timestamps and convert between different date formats.",
+  "shortDesc": "Generate timestamps",
+  "category": "generators",
+  "icon": "⏰",
+  "inputs": [
+    {
+      "id": "type",
+      "type": "select",
+      "label": "Operation",
+      "options": [
+        {"label": "Generate Current Timestamp", "value": "current"},
+        {"label": "Convert Date to Timestamp", "value": "date-to-timestamp"},
+        {"label": "Convert Timestamp to Date", "value": "timestamp-to-date"}
+      ],
+      "required": true,
+      "defaultValue": "current"
+    },
+    {
+      "id": "date",
+      "type": "datetime-local",
+      "label": "Date (for conversion)",
+      "placeholder": "Select date",
+      "required": false
+    },
+    {
+      "id": "timestamp",
+      "type": "number",
+      "label": "Timestamp (for conversion)",
+      "placeholder": "Enter timestamp",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "timestamp",
+      "type": "text",
+      "label": "Unix Timestamp"
+    },
+    {
+      "id": "iso8601",
+      "type": "text",
+      "label": "ISO 8601"
+    },
+    {
+      "id": "utc",
+      "type": "text",
+      "label": "UTC Date"
+    },
+    {
+      "id": "local",
+      "type": "text",
+      "label": "Local Date"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "timestamp-generator"
+  },
+  "seo": {
+    "title": "Timestamp Generator - Convert Unix Timestamps",
+    "description": "Generate Unix timestamps and convert between timestamps and date formats.",
+    "keywords": ["timestamp generator", "unix timestamp", "epoch converter", "timestamp converter"]
+  }
+}

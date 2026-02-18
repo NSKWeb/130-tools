@@ -1,0 +1,50 @@
+{
+  "id": "dns-lookup",
+  "slug": "dns-lookup",
+  "name": "DNS Lookup",
+  "description": "Lookup DNS records for any domain including A, MX, NS, CNAME, and TXT records.",
+  "shortDesc": "Lookup DNS records",
+  "category": "security-tools",
+  "icon": "🌐",
+  "inputs": [
+    {
+      "id": "domain",
+      "type": "text",
+      "label": "Domain Name",
+      "placeholder": "example.com",
+      "required": true
+    },
+    {
+      "id": "recordType",
+      "type": "select",
+      "label": "Record Type",
+      "options": [
+        {"label": "A (IPv4 Address)", "value": "A"},
+        {"label": "AAAA (IPv6 Address)", "value": "AAAA"},
+        {"label": "MX (Mail Exchange)", "value": "MX"},
+        {"label": "NS (Name Server)", "value": "NS"},
+        {"label": "CNAME (Alias)", "value": "CNAME"},
+        {"label": "TXT (Text Record)", "value": "TXT"},
+        {"label": "SOA (Start of Authority)", "value": "SOA"}
+      ],
+      "required": true,
+      "defaultValue": "A"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "records",
+      "type": "json",
+      "label": "DNS Records"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "dns-lookup"
+  },
+  "seo": {
+    "title": "DNS Lookup - Check DNS Records",
+    "description": "Lookup DNS records including A, MX, NS, CNAME, and TXT records.",
+    "keywords": ["dns lookup", "dns records", "check dns", "dns checker"]
+  }
+}

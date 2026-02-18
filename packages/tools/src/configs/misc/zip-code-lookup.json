@@ -1,0 +1,62 @@
+{
+  "id": "zip-code-lookup",
+  "slug": "zip-code-lookup",
+  "name": "ZIP Code Lookup",
+  "description": "Lookup ZIP code information including city, state, and coordinates.",
+  "shortDesc": "Lookup ZIP code info",
+  "category": "misc",
+  "icon": "📍",
+  "inputs": [
+    {
+      "id": "zipCode",
+      "type": "text",
+      "label": "ZIP Code",
+      "placeholder": "Enter ZIP code",
+      "required": true,
+      "validation": {
+        "pattern": "^\\d{5}(-\\d{4})?$"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "city",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "id": "state",
+      "type": "text",
+      "label": "State"
+    },
+    {
+      "id": "county",
+      "type": "text",
+      "label": "County"
+    },
+    {
+      "id": "latitude",
+      "type": "text",
+      "label": "Latitude"
+    },
+    {
+      "id": "longitude",
+      "type": "text",
+      "label": "Longitude"
+    },
+    {
+      "id": "timezone",
+      "type": "text",
+      "label": "Timezone"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "zip-code-lookup"
+  },
+  "seo": {
+    "title": "ZIP Code Lookup - Find ZIP Code Information",
+    "description": "Lookup ZIP code information including city, state, county, and coordinates.",
+    "keywords": ["zip code lookup", "zip code search", "find zip", "postal code"]
+  }
+}

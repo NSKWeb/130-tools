@@ -1,0 +1,58 @@
+{
+  "id": "temperature-converter",
+  "slug": "temperature-converter",
+  "name": "Temperature Converter",
+  "description": "Convert temperature between Celsius, Fahrenheit, and Kelvin instantly.",
+  "shortDesc": "Convert temperature units",
+  "category": "converters",
+  "icon": "🌡️",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Temperature Value",
+      "placeholder": "Enter temperature",
+      "required": true
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Celsius (°C)", "value": "celsius"},
+        {"label": "Fahrenheit (°F)", "value": "fahrenheit"},
+        {"label": "Kelvin (K)", "value": "kelvin"}
+      ],
+      "required": true,
+      "defaultValue": "celsius"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Celsius (°C)", "value": "celsius"},
+        {"label": "Fahrenheit (°F)", "value": "fahrenheit"},
+        {"label": "Kelvin (K)", "value": "kelvin"}
+      ],
+      "required": true,
+      "defaultValue": "fahrenheit"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Temperature"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "temperature-converter"
+  },
+  "seo": {
+    "title": "Temperature Converter - Celsius, Fahrenheit, Kelvin",
+    "description": "Convert temperature between Celsius, Fahrenheit, and Kelvin instantly.",
+    "keywords": ["temperature converter", "celsius to fahrenheit", "fahrenheit to celsius", "kelvin converter"]
+  }
+}

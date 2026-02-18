@@ -1,0 +1,74 @@
+{
+  "id": "gradient-generator",
+  "slug": "gradient-generator",
+  "name": "CSS Gradient Generator",
+  "description": "Generate CSS gradients with customizable colors and direction.",
+  "shortDesc": "Generate CSS gradients",
+  "category": "generators",
+  "icon": "🌈",
+  "inputs": [
+    {
+      "id": "color1",
+      "type": "color",
+      "label": "Start Color",
+      "placeholder": "Pick start color",
+      "required": true,
+      "defaultValue": "#667eea"
+    },
+    {
+      "id": "color2",
+      "type": "color",
+      "label": "End Color",
+      "placeholder": "Pick end color",
+      "required": true,
+      "defaultValue": "#764ba2"
+    },
+    {
+      "id": "type",
+      "type": "select",
+      "label": "Gradient Type",
+      "options": [
+        {"label": "Linear", "value": "linear"},
+        {"label": "Radial", "value": "radial"}
+      ],
+      "required": true,
+      "defaultValue": "linear"
+    },
+    {
+      "id": "direction",
+      "type": "select",
+      "label": "Direction (for linear)",
+      "options": [
+        {"label": "To Right", "value": "to right"},
+        {"label": "To Left", "value": "to left"},
+        {"label": "To Bottom", "value": "to bottom"},
+        {"label": "To Top", "value": "to top"},
+        {"label": "Diagonal (↘)", "value": "135deg"},
+        {"label": "Diagonal (↗)", "value": "45deg"}
+      ],
+      "required": true,
+      "defaultValue": "to right"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "css",
+      "type": "text",
+      "label": "CSS Code"
+    },
+    {
+      "id": "preview",
+      "type": "text",
+      "label": "Gradient Preview"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "gradient-generator"
+  },
+  "seo": {
+    "title": "CSS Gradient Generator - Create Beautiful Gradients",
+    "description": "Generate CSS linear and radial gradients with customizable colors and direction.",
+    "keywords": ["css gradient generator", "gradient maker", "css gradient", "gradient creator"]
+  }
+}

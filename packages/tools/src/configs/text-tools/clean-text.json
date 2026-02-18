@@ -1,0 +1,53 @@
+{
+  "id": "clean-text",
+  "slug": "clean-text",
+  "name": "Clean Text",
+  "description": "Clean text by removing extra whitespace, line breaks, and formatting characters.",
+  "shortDesc": "Clean and format text",
+  "category": "text-tools",
+  "icon": "✨",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Paste text to clean...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "removeExtraSpaces",
+      "type": "checkbox",
+      "label": "Remove extra spaces",
+      "defaultValue": true
+    },
+    {
+      "id": "removeLineBreaks",
+      "type": "checkbox",
+      "label": "Remove line breaks",
+      "defaultValue": false
+    },
+    {
+      "id": "removeSpecialChars",
+      "type": "checkbox",
+      "label": "Remove special characters",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Cleaned Text"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "clean-text"
+  },
+  "seo": {
+    "title": "Clean Text - Remove Extra Spaces and Formatting",
+    "description": "Clean text by removing extra whitespace, line breaks, and special characters.",
+    "keywords": ["clean text", "remove extra spaces", "text cleaner", "format text"]
+  }
+}

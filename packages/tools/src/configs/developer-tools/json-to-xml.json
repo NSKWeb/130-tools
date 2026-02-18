@@ -1,0 +1,43 @@
+{
+  "id": "json-to-xml",
+  "slug": "json-to-xml",
+  "name": "JSON to XML Converter",
+  "description": "Convert JSON data to XML format instantly.",
+  "shortDesc": "Convert JSON to XML",
+  "category": "developer-tools",
+  "icon": "🔄",
+  "inputs": [
+    {
+      "id": "json",
+      "type": "textarea",
+      "label": "Enter JSON",
+      "placeholder": "Paste your JSON here...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "rootElement",
+      "type": "text",
+      "label": "Root Element Name",
+      "placeholder": "Root element",
+      "required": false,
+      "defaultValue": "root"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "XML Output"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "json-to-xml"
+  },
+  "seo": {
+    "title": "JSON to XML Converter - Convert JSON to XML",
+    "description": "Convert JSON data to XML format with customizable root element.",
+    "keywords": ["json to xml", "convert json", "xml converter", "json converter"]
+  }
+}

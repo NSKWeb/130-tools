@@ -1,0 +1,69 @@
+{
+  "id": "pressure-converter",
+  "slug": "pressure-converter",
+  "name": "Pressure Converter",
+  "description": "Convert pressure measurements between psi, bar, pascals, atmospheres, and more.",
+  "shortDesc": "Convert between pressure units",
+  "category": "converters",
+  "icon": "🌡️",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Pascals (Pa)", "value": "pa"},
+        {"label": "Kilopascals (kPa)", "value": "kpa"},
+        {"label": "Bar", "value": "bar"},
+        {"label": "Psi (pounds per sq inch)", "value": "psi"},
+        {"label": "Atmospheres (atm)", "value": "atm"},
+        {"label": "Torr", "value": "torr"},
+        {"label": "mmHg", "value": "mmhg"}
+      ],
+      "required": true,
+      "defaultValue": "bar"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Pascals (Pa)", "value": "pa"},
+        {"label": "Kilopascals (kPa)", "value": "kpa"},
+        {"label": "Bar", "value": "bar"},
+        {"label": "Psi (pounds per sq inch)", "value": "psi"},
+        {"label": "Atmospheres (atm)", "value": "atm"},
+        {"label": "Torr", "value": "torr"},
+        {"label": "mmHg", "value": "mmhg"}
+      ],
+      "required": true,
+      "defaultValue": "psi"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Pressure"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "pressure-converter"
+  },
+  "seo": {
+    "title": "Pressure Converter - Convert Pressure Units",
+    "description": "Convert pressure between psi, bar, pascals, atmospheres, and other pressure units.",
+    "keywords": ["pressure converter", "psi to bar", "pressure units", "bar converter"]
+  }
+}

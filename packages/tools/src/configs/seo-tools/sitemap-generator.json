@@ -1,0 +1,70 @@
+{
+  "id": "sitemap-generator",
+  "slug": "sitemap-generator",
+  "name": "XML Sitemap Generator",
+  "description": "Generate XML sitemaps for your website to help search engines index your pages.",
+  "shortDesc": "Generate XML sitemaps",
+  "category": "seo-tools",
+  "icon": "🗺️",
+  "inputs": [
+    {
+      "id": "urls",
+      "type": "textarea",
+      "label": "URLs (one per line)",
+      "placeholder": "https://example.com/page1\nhttps://example.com/page2",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "changeFreq",
+      "type": "select",
+      "label": "Change Frequency",
+      "options": [
+        {"label": "Always", "value": "always"},
+        {"label": "Hourly", "value": "hourly"},
+        {"label": "Daily", "value": "daily"},
+        {"label": "Weekly", "value": "weekly"},
+        {"label": "Monthly", "value": "monthly"},
+        {"label": "Yearly", "value": "yearly"},
+        {"label": "Never", "value": "never"}
+      ],
+      "required": true,
+      "defaultValue": "weekly"
+    },
+    {
+      "id": "priority",
+      "type": "select",
+      "label": "Priority",
+      "options": [
+        {"label": "1.0 (Highest)", "value": "1.0"},
+        {"label": "0.9", "value": "0.9"},
+        {"label": "0.8", "value": "0.8"},
+        {"label": "0.7", "value": "0.7"},
+        {"label": "0.6", "value": "0.6"},
+        {"label": "0.5", "value": "0.5"},
+        {"label": "0.4", "value": "0.4"},
+        {"label": "0.3", "value": "0.3"},
+        {"label": "0.2", "value": "0.2"},
+        {"label": "0.1 (Lowest)", "value": "0.1"}
+      ],
+      "required": true,
+      "defaultValue": "0.8"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sitemap",
+      "type": "textarea",
+      "label": "XML Sitemap"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "sitemap-generator"
+  },
+  "seo": {
+    "title": "XML Sitemap Generator - Create Sitemaps",
+    "description": "Generate XML sitemaps for your website to help search engines index your pages.",
+    "keywords": ["sitemap generator", "xml sitemap", "create sitemap", "sitemap maker"]
+  }
+}

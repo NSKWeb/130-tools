@@ -1,0 +1,46 @@
+{
+  "id": "letter-counter",
+  "slug": "letter-counter",
+  "name": "Letter Counter",
+  "description": "Count individual letters and get frequency analysis of each character in your text.",
+  "shortDesc": "Count letter frequency",
+  "category": "text-tools",
+  "icon": "🔤",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Type or paste your text here...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "caseSensitive",
+      "type": "checkbox",
+      "label": "Case sensitive",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalLetters",
+      "type": "text",
+      "label": "Total Letters"
+    },
+    {
+      "id": "frequency",
+      "type": "json",
+      "label": "Letter Frequency"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "letter-counter"
+  },
+  "seo": {
+    "title": "Letter Counter - Count Letter Frequency",
+    "description": "Count individual letters and analyze character frequency in your text.",
+    "keywords": ["letter counter", "character frequency", "letter analysis", "text analyzer"]
+  }
+}

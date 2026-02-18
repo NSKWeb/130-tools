@@ -1,0 +1,55 @@
+{
+  "id": "heading-analyzer",
+  "slug": "heading-analyzer",
+  "name": "Heading Structure Analyzer",
+  "description": "Analyze the heading structure (H1-H6) of your content for SEO.",
+  "shortDesc": "Analyze heading structure",
+  "category": "seo-tools",
+  "icon": "📝",
+  "inputs": [
+    {
+      "id": "content",
+      "type": "textarea",
+      "label": "Content with Headings",
+      "placeholder": "Paste your HTML content...",
+      "required": true,
+      "rows": 15
+    }
+  ],
+  "outputs": [
+    {
+      "id": "h1",
+      "type": "text",
+      "label": "H1 Count"
+    },
+    {
+      "id": "h2",
+      "type": "text",
+      "label": "H2 Count"
+    },
+    {
+      "id": "h3",
+      "type": "text",
+      "label": "H3 Count"
+    },
+    {
+      "id": "structure",
+      "type": "json",
+      "label": "Heading Structure"
+    },
+    {
+      "id": "issues",
+      "type": "text",
+      "label": "Issues Found"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "heading-analyzer"
+  },
+  "seo": {
+    "title": "Heading Structure Analyzer - Analyze H1-H6 Tags",
+    "description": "Analyze the heading structure of your content for proper SEO hierarchy.",
+    "keywords": ["heading analyzer", "h1 checker", "heading structure", "seo headings"]
+  }
+}

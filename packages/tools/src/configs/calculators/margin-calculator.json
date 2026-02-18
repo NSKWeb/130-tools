@@ -1,0 +1,57 @@
+{
+  "id": "margin-calculator",
+  "slug": "margin-calculator",
+  "name": "Margin Calculator",
+  "description": "Calculate profit margin, markup, and selling price based on cost and desired margin.",
+  "shortDesc": "Calculate profit margin",
+  "category": "calculators",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "cost",
+      "type": "number",
+      "label": "Cost Price ($)",
+      "placeholder": "Enter cost price",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "revenue",
+      "type": "number",
+      "label": "Revenue/Selling Price ($)",
+      "placeholder": "Enter selling price",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "margin",
+      "type": "text",
+      "label": "Gross Margin (%)"
+    },
+    {
+      "id": "markup",
+      "type": "text",
+      "label": "Markup (%)"
+    },
+    {
+      "id": "profit",
+      "type": "text",
+      "label": "Profit ($)"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "margin-calculator"
+  },
+  "seo": {
+    "title": "Margin Calculator - Calculate Profit Margin",
+    "description": "Calculate profit margin, markup, and profit based on cost and selling price.",
+    "keywords": ["margin calculator", "profit margin", "gross margin calculator", "markup calculator"]
+  }
+}
