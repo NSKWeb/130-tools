@@ -1,0 +1,41 @@
+{
+  "name": "@130tools/tools",
+  "version": "1.0.0",
+  "description": "Tool engine and configurations (113 tools)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./engine": {
+      "import": "./dist/engine/executor.mjs",
+      "require": "./dist/engine/executor.js",
+      "types": "./dist/engine/executor.d.ts"
+    },
+    "./configs/*": {
+      "import": "./dist/configs/*.mjs",
+      "require": "./dist/configs/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/engine/executor.ts --format cjs,esm --dts --loader '.json=json'",
+    "dev": "tsup src/index.ts src/engine/executor.ts --format cjs,esm --dts --watch --loader '.json=json'",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@130tools/types": "workspace:*",
+    "@130tools/cache": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
