@@ -1,0 +1,67 @@
+{
+  "id": "speed-converter",
+  "slug": "speed-converter",
+  "name": "Speed Converter",
+  "description": "Convert speed measurements between mph, km/h, m/s, knots, and other speed units.",
+  "shortDesc": "Convert between speed units",
+  "category": "converters",
+  "icon": "🚀",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Miles per Hour (mph)", "value": "mph"},
+        {"label": "Kilometers per Hour (km/h)", "value": "kmh"},
+        {"label": "Meters per Second (m/s)", "value": "mps"},
+        {"label": "Feet per Second (ft/s)", "value": "fps"},
+        {"label": "Knots", "value": "knots"},
+        {"label": "Mach", "value": "mach"}
+      ],
+      "required": true,
+      "defaultValue": "kmh"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Miles per Hour (mph)", "value": "mph"},
+        {"label": "Kilometers per Hour (km/h)", "value": "kmh"},
+        {"label": "Meters per Second (m/s)", "value": "mps"},
+        {"label": "Feet per Second (ft/s)", "value": "fps"},
+        {"label": "Knots", "value": "knots"},
+        {"label": "Mach", "value": "mach"}
+      ],
+      "required": true,
+      "defaultValue": "mph"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Speed"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "speed-converter"
+  },
+  "seo": {
+    "title": "Speed Converter - Convert Speed Units",
+    "description": "Convert speed between mph, km/h, m/s, knots, and other speed units.",
+    "keywords": ["speed converter", "mph to km/h", "speed calculator", "velocity converter"]
+  }
+}

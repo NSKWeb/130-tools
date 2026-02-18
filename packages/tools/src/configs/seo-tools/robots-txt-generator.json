@@ -1,0 +1,48 @@
+{
+  "id": "robots-txt-generator",
+  "slug": "robots-txt-generator",
+  "name": "Robots.txt Generator",
+  "description": "Generate robots.txt files to control search engine crawling.",
+  "shortDesc": "Generate robots.txt",
+  "category": "seo-tools",
+  "icon": "🤖",
+  "inputs": [
+    {
+      "id": "allowAll",
+      "type": "checkbox",
+      "label": "Allow all bots",
+      "defaultValue": true
+    },
+    {
+      "id": "disallowPaths",
+      "type": "textarea",
+      "label": "Disallow Paths (one per line)",
+      "placeholder": "/admin/\n/private/",
+      "required": false,
+      "rows": 5
+    },
+    {
+      "id": "sitemapUrl",
+      "type": "text",
+      "label": "Sitemap URL",
+      "placeholder": "https://example.com/sitemap.xml",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "robotsTxt",
+      "type": "textarea",
+      "label": "robots.txt Content"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "robots-txt-generator"
+  },
+  "seo": {
+    "title": "Robots.txt Generator - Create robots.txt",
+    "description": "Generate robots.txt files to control how search engines crawl your website.",
+    "keywords": ["robots.txt generator", "create robots.txt", "robots file", "crawl control"]
+  }
+}

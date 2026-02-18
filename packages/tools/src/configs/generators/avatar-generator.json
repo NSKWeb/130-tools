@@ -1,0 +1,63 @@
+{
+  "id": "avatar-generator",
+  "slug": "avatar-generator",
+  "name": "Avatar Generator",
+  "description": "Generate unique avatars with customizable styles and initials.",
+  "shortDesc": "Generate avatars",
+  "category": "generators",
+  "icon": "👤",
+  "inputs": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Name (for initials)",
+      "placeholder": "Enter name",
+      "required": true
+    },
+    {
+      "id": "backgroundColor",
+      "type": "color",
+      "label": "Background Color",
+      "placeholder": "Pick background",
+      "required": true,
+      "defaultValue": "#3b82f6"
+    },
+    {
+      "id": "textColor",
+      "type": "color",
+      "label": "Text Color",
+      "placeholder": "Pick text color",
+      "required": true,
+      "defaultValue": "#ffffff"
+    },
+    {
+      "id": "size",
+      "type": "select",
+      "label": "Size",
+      "options": [
+        {"label": "Small (64px)", "value": 64},
+        {"label": "Medium (128px)", "value": 128},
+        {"label": "Large (256px)", "value": 256},
+        {"label": "Extra Large (512px)", "value": 512}
+      ],
+      "required": true,
+      "defaultValue": 128
+    }
+  ],
+  "outputs": [
+    {
+      "id": "avatarUrl",
+      "type": "image",
+      "label": "Avatar"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "avatar-generator"
+  },
+  "seo": {
+    "title": "Avatar Generator - Create Custom Avatars",
+    "description": "Generate unique avatars with initials and customizable colors.",
+    "keywords": ["avatar generator", "create avatar", "initials avatar", "profile picture"]
+  }
+}

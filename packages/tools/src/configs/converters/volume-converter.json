@@ -1,0 +1,79 @@
+{
+  "id": "volume-converter",
+  "slug": "volume-converter",
+  "name": "Volume Converter",
+  "description": "Convert volume measurements between liters, gallons, milliliters, cubic meters, and more.",
+  "shortDesc": "Convert between volume units",
+  "category": "converters",
+  "icon": "🧊",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Milliliters (ml)", "value": "ml"},
+        {"label": "Liters (L)", "value": "l"},
+        {"label": "Cubic Meters (m³)", "value": "m3"},
+        {"label": "Cubic Centimeters (cm³)", "value": "cm3"},
+        {"label": "US Teaspoons (tsp)", "value": "tsp"},
+        {"label": "US Tablespoons (tbsp)", "value": "tbsp"},
+        {"label": "US Fluid Ounces (fl oz)", "value": "floz"},
+        {"label": "US Cups", "value": "cup"},
+        {"label": "US Pints", "value": "pt"},
+        {"label": "US Quarts", "value": "qt"},
+        {"label": "US Gallons", "value": "gal"},
+        {"label": "Imperial Gallons", "value": "impgal"}
+      ],
+      "required": true,
+      "defaultValue": "l"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Milliliters (ml)", "value": "ml"},
+        {"label": "Liters (L)", "value": "l"},
+        {"label": "Cubic Meters (m³)", "value": "m3"},
+        {"label": "Cubic Centimeters (cm³)", "value": "cm3"},
+        {"label": "US Teaspoons (tsp)", "value": "tsp"},
+        {"label": "US Tablespoons (tbsp)", "value": "tbsp"},
+        {"label": "US Fluid Ounces (fl oz)", "value": "floz"},
+        {"label": "US Cups", "value": "cup"},
+        {"label": "US Pints", "value": "pt"},
+        {"label": "US Quarts", "value": "qt"},
+        {"label": "US Gallons", "value": "gal"},
+        {"label": "Imperial Gallons", "value": "impgal"}
+      ],
+      "required": true,
+      "defaultValue": "gal"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Volume"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "volume-converter"
+  },
+  "seo": {
+    "title": "Volume Converter - Convert Volume Units",
+    "description": "Convert volume between liters, gallons, milliliters, cups, and other volume units.",
+    "keywords": ["volume converter", "liters to gallons", "ml to oz", "volume calculator"]
+  }
+}

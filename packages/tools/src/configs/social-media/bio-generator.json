@@ -1,0 +1,62 @@
+{
+  "id": "bio-generator",
+  "slug": "bio-generator",
+  "name": "Bio Generator",
+  "description": "Generate creative bios for social media profiles.",
+  "shortDesc": "Generate social media bios",
+  "category": "social-media",
+  "icon": "✨",
+  "inputs": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Name",
+      "placeholder": "Your name",
+      "required": true
+    },
+    {
+      "id": "interests",
+      "type": "textarea",
+      "label": "Interests/Hobbies",
+      "placeholder": "List your interests...",
+      "required": true,
+      "rows": 4
+    },
+    {
+      "id": "profession",
+      "type": "text",
+      "label": "Profession (optional)",
+      "placeholder": "What you do",
+      "required": false
+    },
+    {
+      "id": "style",
+      "type": "select",
+      "label": "Bio Style",
+      "options": [
+        {"label": "Professional", "value": "professional"},
+        {"label": "Fun & Casual", "value": "casual"},
+        {"label": "Creative", "value": "creative"},
+        {"label": "Minimalist", "value": "minimalist"}
+      ],
+      "required": true,
+      "defaultValue": "casual"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bios",
+      "type": "json",
+      "label": "Generated Bios"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "bio-generator"
+  },
+  "seo": {
+    "title": "Bio Generator - Create Social Media Bios",
+    "description": "Generate creative and engaging bios for your social media profiles.",
+    "keywords": ["bio generator", "social media bio", "profile bio", "instagram bio"]
+  }
+}

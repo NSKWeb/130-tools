@@ -1,0 +1,54 @@
+{
+  "id": "ip-lookup",
+  "slug": "ip-lookup",
+  "name": "IP Address Lookup",
+  "description": "Lookup IP address information including location, ISP, and other details.",
+  "shortDesc": "Lookup IP information",
+  "category": "security-tools",
+  "icon": "🌍",
+  "inputs": [
+    {
+      "id": "ip",
+      "type": "text",
+      "label": "IP Address (leave blank for your IP)",
+      "placeholder": "e.g., 8.8.8.8",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ip",
+      "type": "text",
+      "label": "IP Address"
+    },
+    {
+      "id": "country",
+      "type": "text",
+      "label": "Country"
+    },
+    {
+      "id": "city",
+      "type": "text",
+      "label": "City"
+    },
+    {
+      "id": "isp",
+      "type": "text",
+      "label": "ISP"
+    },
+    {
+      "id": "timezone",
+      "type": "text",
+      "label": "Timezone"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "ip-lookup"
+  },
+  "seo": {
+    "title": "IP Address Lookup - Find IP Information",
+    "description": "Lookup IP address location, ISP, and other details.",
+    "keywords": ["ip lookup", "ip address", "ip location", "what is my ip"]
+  }
+}

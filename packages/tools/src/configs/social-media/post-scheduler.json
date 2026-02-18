@@ -1,0 +1,65 @@
+{
+  "id": "post-scheduler",
+  "slug": "post-scheduler",
+  "name": "Best Time to Post",
+  "description": "Find the best times to post on social media for maximum engagement.",
+  "shortDesc": "Find best posting times",
+  "category": "social-media",
+  "icon": "⏰",
+  "inputs": [
+    {
+      "id": "platform",
+      "type": "select",
+      "label": "Platform",
+      "options": [
+        {"label": "Instagram", "value": "instagram"},
+        {"label": "Twitter", "value": "twitter"},
+        {"label": "Facebook", "value": "facebook"},
+        {"label": "LinkedIn", "value": "linkedin"},
+        {"label": "TikTok", "value": "tiktok"}
+      ],
+      "required": true,
+      "defaultValue": "instagram"
+    },
+    {
+      "id": "audience",
+      "type": "select",
+      "label": "Target Audience Location",
+      "options": [
+        {"label": "North America", "value": "na"},
+        {"label": "Europe", "value": "eu"},
+        {"label": "Asia", "value": "asia"},
+        {"label": "Australia", "value": "au"},
+        {"label": "Global", "value": "global"}
+      ],
+      "required": true,
+      "defaultValue": "global"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bestTimes",
+      "type": "json",
+      "label": "Best Posting Times"
+    },
+    {
+      "id": "worstTimes",
+      "type": "json",
+      "label": "Worst Times to Avoid"
+    },
+    {
+      "id": "tips",
+      "type": "text",
+      "label": "Tips"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "post-scheduler"
+  },
+  "seo": {
+    "title": "Best Time to Post - Social Media Scheduler",
+    "description": "Find the best times to post on social media for maximum engagement.",
+    "keywords": ["best time to post", "social media scheduler", "posting times", "engagement times"]
+  }
+}

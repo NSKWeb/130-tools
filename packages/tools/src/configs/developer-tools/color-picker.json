@@ -1,0 +1,50 @@
+{
+  "id": "color-picker",
+  "slug": "color-picker",
+  "name": "Color Picker",
+  "description": "Pick colors and convert between HEX, RGB, HSL, and other color formats.",
+  "shortDesc": "Pick and convert colors",
+  "category": "developer-tools",
+  "icon": "🎨",
+  "inputs": [
+    {
+      "id": "color",
+      "type": "color",
+      "label": "Pick a Color",
+      "placeholder": "Select color",
+      "required": true,
+      "defaultValue": "#3b82f6"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hex",
+      "type": "text",
+      "label": "HEX"
+    },
+    {
+      "id": "rgb",
+      "type": "text",
+      "label": "RGB"
+    },
+    {
+      "id": "hsl",
+      "type": "text",
+      "label": "HSL"
+    },
+    {
+      "id": "hsv",
+      "type": "text",
+      "label": "HSV"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "color-picker"
+  },
+  "seo": {
+    "title": "Color Picker - Convert Between Color Formats",
+    "description": "Pick colors and convert between HEX, RGB, HSL, and other color formats.",
+    "keywords": ["color picker", "hex to rgb", "color converter", "color palette"]
+  }
+}

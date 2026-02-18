@@ -1,0 +1,74 @@
+{
+  "id": "date-calculator",
+  "slug": "date-calculator",
+  "name": "Date Calculator",
+  "description": "Add or subtract days, weeks, months, or years from a date.",
+  "shortDesc": "Calculate dates",
+  "category": "misc",
+  "icon": "📅",
+  "inputs": [
+    {
+      "id": "date",
+      "type": "date",
+      "label": "Start Date",
+      "placeholder": "Select start date",
+      "required": true
+    },
+    {
+      "id": "operation",
+      "type": "select",
+      "label": "Operation",
+      "options": [
+        {"label": "Add", "value": "add"},
+        {"label": "Subtract", "value": "subtract"}
+      ],
+      "required": true,
+      "defaultValue": "add"
+    },
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter number",
+      "required": true,
+      "defaultValue": 30,
+      "validation": {
+        "min": 1
+      }
+    },
+    {
+      "id": "unit",
+      "type": "select",
+      "label": "Unit",
+      "options": [
+        {"label": "Days", "value": "days"},
+        {"label": "Weeks", "value": "weeks"},
+        {"label": "Months", "value": "months"},
+        {"label": "Years", "value": "years"}
+      ],
+      "required": true,
+      "defaultValue": "days"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Result Date"
+    },
+    {
+      "id": "dayOfWeek",
+      "type": "text",
+      "label": "Day of Week"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "date-calculator"
+  },
+  "seo": {
+    "title": "Date Calculator - Add or Subtract from Dates",
+    "description": "Add or subtract days, weeks, months, or years from any date.",
+    "keywords": ["date calculator", "date adder", "date subtract", "calculate date"]
+  }
+}

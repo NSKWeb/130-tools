@@ -1,0 +1,101 @@
+{
+  "id": "salary-calculator",
+  "slug": "salary-calculator",
+  "name": "Salary Calculator",
+  "description": "Convert between hourly, daily, weekly, bi-weekly, monthly, and annual salary rates.",
+  "shortDesc": "Convert salary rates",
+  "category": "calculators",
+  "icon": "💵",
+  "inputs": [
+    {
+      "id": "amount",
+      "type": "number",
+      "label": "Salary Amount ($)",
+      "placeholder": "Enter salary amount",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "type",
+      "type": "select",
+      "label": "Salary Type",
+      "options": [
+        {"label": "Hourly", "value": "hourly"},
+        {"label": "Daily", "value": "daily"},
+        {"label": "Weekly", "value": "weekly"},
+        {"label": "Bi-Weekly", "value": "biweekly"},
+        {"label": "Monthly", "value": "monthly"},
+        {"label": "Annual", "value": "annual"}
+      ],
+      "required": true,
+      "defaultValue": "annual"
+    },
+    {
+      "id": "hoursPerWeek",
+      "type": "number",
+      "label": "Hours per Week",
+      "placeholder": "Enter hours per week",
+      "required": true,
+      "defaultValue": 40,
+      "validation": {
+        "min": 1,
+        "max": 168
+      }
+    },
+    {
+      "id": "weeksPerYear",
+      "type": "number",
+      "label": "Weeks per Year",
+      "placeholder": "Enter weeks per year",
+      "required": true,
+      "defaultValue": 52,
+      "validation": {
+        "min": 1,
+        "max": 52
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hourly",
+      "type": "text",
+      "label": "Hourly"
+    },
+    {
+      "id": "daily",
+      "type": "text",
+      "label": "Daily"
+    },
+    {
+      "id": "weekly",
+      "type": "text",
+      "label": "Weekly"
+    },
+    {
+      "id": "biweekly",
+      "type": "text",
+      "label": "Bi-Weekly"
+    },
+    {
+      "id": "monthly",
+      "type": "text",
+      "label": "Monthly"
+    },
+    {
+      "id": "annual",
+      "type": "text",
+      "label": "Annual"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "salary-calculator"
+  },
+  "seo": {
+    "title": "Salary Calculator - Convert Salary Rates",
+    "description": "Convert salary between hourly, daily, weekly, bi-weekly, monthly, and annual rates.",
+    "keywords": ["salary calculator", "hourly to salary", "salary converter", "paycheck calculator"]
+  }
+}

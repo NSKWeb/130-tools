@@ -1,0 +1,56 @@
+{
+  "id": "base64-encoder",
+  "slug": "base64-encoder",
+  "name": "Base64 Encoder/Decoder",
+  "description": "Encode text to Base64 or decode Base64 to text instantly.",
+  "shortDesc": "Encode/decode Base64",
+  "category": "developer-tools",
+  "icon": "🔄",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Paste your text or Base64 here...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "action",
+      "type": "select",
+      "label": "Action",
+      "options": [
+        {"label": "Encode to Base64", "value": "encode"},
+        {"label": "Decode from Base64", "value": "decode"}
+      ],
+      "required": true,
+      "defaultValue": "encode"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Result"
+    },
+    {
+      "id": "success",
+      "type": "text",
+      "label": "Success"
+    },
+    {
+      "id": "error",
+      "type": "text",
+      "label": "Error"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "base64-encoder"
+  },
+  "seo": {
+    "title": "Base64 Encoder/Decoder - Free Base64 Tool",
+    "description": "Encode text to Base64 or decode Base64 to text. Fast and easy Base64 conversion.",
+    "keywords": ["base64 encoder", "base64 decoder", "base64 converter", "encode base64"]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "barcode-generator",
+  "slug": "barcode-generator",
+  "name": "Barcode Generator",
+  "description": "Generate various types of barcodes for products and inventory.",
+  "shortDesc": "Generate barcodes",
+  "category": "generators",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "text",
+      "label": "Barcode Text/Number",
+      "placeholder": "Enter barcode data",
+      "required": true
+    },
+    {
+      "id": "format",
+      "type": "select",
+      "label": "Barcode Format",
+      "options": [
+        {"label": "CODE128", "value": "CODE128"},
+        {"label": "CODE39", "value": "CODE39"},
+        {"label": "EAN13", "value": "EAN13"},
+        {"label": "EAN8", "value": "EAN8"},
+        {"label": "UPC", "value": "UPC"}
+      ],
+      "required": true,
+      "defaultValue": "CODE128"
+    },
+    {
+      "id": "width",
+      "type": "number",
+      "label": "Width (px)",
+      "placeholder": "Barcode width",
+      "required": true,
+      "defaultValue": 300,
+      "validation": {
+        "min": 100,
+        "max": 1000
+      }
+    },
+    {
+      "id": "height",
+      "type": "number",
+      "label": "Height (px)",
+      "placeholder": "Barcode height",
+      "required": true,
+      "defaultValue": 100,
+      "validation": {
+        "min": 50,
+        "max": 500
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "barcode",
+      "type": "image",
+      "label": "Barcode"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "barcode-generator"
+  },
+  "seo": {
+    "title": "Barcode Generator - Create Product Barcodes",
+    "description": "Generate various types of barcodes including CODE128, CODE39, EAN, and UPC.",
+    "keywords": ["barcode generator", "create barcode", "product barcode", "code128"]
+  }
+}

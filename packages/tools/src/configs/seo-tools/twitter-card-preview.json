@@ -1,0 +1,60 @@
+{
+  "id": "twitter-card-preview",
+  "slug": "twitter-card-preview",
+  "name": "Twitter Card Preview",
+  "description": "Preview how your content will appear when shared on Twitter.",
+  "shortDesc": "Preview Twitter cards",
+  "category": "seo-tools",
+  "icon": "🐦",
+  "inputs": [
+    {
+      "id": "cardType",
+      "type": "select",
+      "label": "Card Type",
+      "options": [
+        {"label": "Summary Card", "value": "summary"},
+        {"label": "Summary Card with Large Image", "value": "summary_large_image"}
+      ],
+      "required": true,
+      "defaultValue": "summary_large_image"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Card Title",
+      "placeholder": "Enter card title",
+      "required": true
+    },
+    {
+      "id": "description",
+      "type": "textarea",
+      "label": "Card Description",
+      "placeholder": "Enter card description",
+      "required": true,
+      "rows": 3
+    },
+    {
+      "id": "image",
+      "type": "text",
+      "label": "Image URL",
+      "placeholder": "https://example.com/image.jpg",
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "preview",
+      "type": "text",
+      "label": "Twitter Card Preview"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "twitter-card-preview"
+  },
+  "seo": {
+    "title": "Twitter Card Preview - Preview Twitter Shares",
+    "description": "Preview how your content will appear when shared on Twitter with Twitter Cards.",
+    "keywords": ["twitter card preview", "twitter preview", "card preview", "twitter sharing"]
+  }
+}

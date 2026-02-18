@@ -1,0 +1,73 @@
+{
+  "id": "time-zone-converter",
+  "slug": "time-zone-converter",
+  "name": "Time Zone Converter",
+  "description": "Convert time between different time zones around the world.",
+  "shortDesc": "Convert between time zones",
+  "category": "misc",
+  "icon": "🌍",
+  "inputs": [
+    {
+      "id": "date",
+      "type": "datetime-local",
+      "label": "Date and Time",
+      "placeholder": "Select date and time",
+      "required": true
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From Time Zone",
+      "options": [
+        {"label": "UTC", "value": "UTC"},
+        {"label": "EST (Eastern Standard)", "value": "America/New_York"},
+        {"label": "PST (Pacific Standard)", "value": "America/Los_Angeles"},
+        {"label": "GMT (Greenwich Mean)", "value": "Europe/London"},
+        {"label": "CET (Central European)", "value": "Europe/Paris"},
+        {"label": "JST (Japan Standard)", "value": "Asia/Tokyo"},
+        {"label": "AEST (Australian Eastern)", "value": "Australia/Sydney"},
+        {"label": "IST (India Standard)", "value": "Asia/Kolkata"}
+      ],
+      "required": true,
+      "defaultValue": "UTC"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To Time Zone",
+      "options": [
+        {"label": "UTC", "value": "UTC"},
+        {"label": "EST (Eastern Standard)", "value": "America/New_York"},
+        {"label": "PST (Pacific Standard)", "value": "America/Los_Angeles"},
+        {"label": "GMT (Greenwich Mean)", "value": "Europe/London"},
+        {"label": "CET (Central European)", "value": "Europe/Paris"},
+        {"label": "JST (Japan Standard)", "value": "Asia/Tokyo"},
+        {"label": "AEST (Australian Eastern)", "value": "Australia/Sydney"},
+        {"label": "IST (India Standard)", "value": "Asia/Kolkata"}
+      ],
+      "required": true,
+      "defaultValue": "America/New_York"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "converted",
+      "type": "text",
+      "label": "Converted Time"
+    },
+    {
+      "id": "offset",
+      "type": "text",
+      "label": "Time Difference"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "time-zone-converter"
+  },
+  "seo": {
+    "title": "Time Zone Converter - Convert Time Between Zones",
+    "description": "Convert time between different time zones around the world.",
+    "keywords": ["time zone converter", "timezone converter", "world clock", "time conversion"]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "csv-to-json",
+  "slug": "csv-to-json",
+  "name": "CSV to JSON Converter",
+  "description": "Convert CSV data to JSON array format for applications and APIs.",
+  "shortDesc": "Convert CSV to JSON",
+  "category": "developer-tools",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "csv",
+      "type": "textarea",
+      "label": "Enter CSV",
+      "placeholder": "Paste your CSV here...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "delimiter",
+      "type": "select",
+      "label": "Delimiter",
+      "options": [
+        {"label": "Comma (,)", "value": ","},
+        {"label": "Semicolon (;)", "value": ";"},
+        {"label": "Tab", "value": "\t"},
+        {"label": "Pipe (|)", "value": "|"}
+      ],
+      "required": true,
+      "defaultValue": ","
+    },
+    {
+      "id": "hasHeader",
+      "type": "checkbox",
+      "label": "First row is header",
+      "defaultValue": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "JSON Output"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "csv-to-json"
+  },
+  "seo": {
+    "title": "CSV to JSON Converter - Convert CSV to JSON",
+    "description": "Convert CSV data to JSON array format for applications and APIs.",
+    "keywords": ["csv to json", "convert csv", "json converter", "csv converter"]
+  }
+}

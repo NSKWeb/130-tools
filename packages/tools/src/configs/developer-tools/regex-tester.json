@@ -1,0 +1,60 @@
+{
+  "id": "regex-tester",
+  "slug": "regex-tester",
+  "name": "Regex Tester",
+  "description": "Test and debug regular expressions with real-time matching and highlighting.",
+  "shortDesc": "Test regular expressions",
+  "category": "developer-tools",
+  "icon": "🔍",
+  "inputs": [
+    {
+      "id": "pattern",
+      "type": "text",
+      "label": "Regular Expression Pattern",
+      "placeholder": "e.g., ^[a-z]+@[a-z]+\\.[a-z]+$",
+      "required": true
+    },
+    {
+      "id": "flags",
+      "type": "text",
+      "label": "Flags",
+      "placeholder": "e.g., gi",
+      "required": false,
+      "defaultValue": "g"
+    },
+    {
+      "id": "testString",
+      "type": "textarea",
+      "label": "Test String",
+      "placeholder": "Enter text to test against...",
+      "required": true,
+      "rows": 8
+    }
+  ],
+  "outputs": [
+    {
+      "id": "matches",
+      "type": "text",
+      "label": "Matches"
+    },
+    {
+      "id": "matchCount",
+      "type": "text",
+      "label": "Match Count"
+    },
+    {
+      "id": "valid",
+      "type": "text",
+      "label": "Valid Regex"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "regex-tester"
+  },
+  "seo": {
+    "title": "Regex Tester - Test Regular Expressions",
+    "description": "Test and debug regular expressions with real-time matching and highlighting.",
+    "keywords": ["regex tester", "regular expression tester", "regex test", "pattern tester"]
+  }
+}

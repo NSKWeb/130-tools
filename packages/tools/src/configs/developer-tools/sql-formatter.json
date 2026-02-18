@@ -1,0 +1,41 @@
+{
+  "id": "sql-formatter",
+  "slug": "sql-formatter",
+  "name": "SQL Formatter",
+  "description": "Format SQL queries with proper indentation and keyword capitalization.",
+  "shortDesc": "Format SQL queries",
+  "category": "developer-tools",
+  "icon": "🗃️",
+  "inputs": [
+    {
+      "id": "sql",
+      "type": "textarea",
+      "label": "Enter SQL",
+      "placeholder": "Paste your SQL query here...",
+      "required": true,
+      "rows": 15
+    },
+    {
+      "id": "uppercaseKeywords",
+      "type": "checkbox",
+      "label": "Uppercase keywords",
+      "defaultValue": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Formatted SQL"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "sql-formatter"
+  },
+  "seo": {
+    "title": "SQL Formatter - Format SQL Queries",
+    "description": "Format SQL queries with proper indentation and keyword styling.",
+    "keywords": ["sql formatter", "format sql", "sql beautifier", "pretty print sql"]
+  }
+}

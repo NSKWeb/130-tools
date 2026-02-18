@@ -1,0 +1,54 @@
+{
+  "id": "ssl-checker",
+  "slug": "ssl-checker",
+  "name": "SSL Certificate Checker",
+  "description": "Check SSL certificate information for any website.",
+  "shortDesc": "Check SSL certificates",
+  "category": "security-tools",
+  "icon": "🔒",
+  "inputs": [
+    {
+      "id": "domain",
+      "type": "text",
+      "label": "Domain Name",
+      "placeholder": "example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "valid",
+      "type": "text",
+      "label": "Valid"
+    },
+    {
+      "id": "issuer",
+      "type": "text",
+      "label": "Issuer"
+    },
+    {
+      "id": "validFrom",
+      "type": "text",
+      "label": "Valid From"
+    },
+    {
+      "id": "validTo",
+      "type": "text",
+      "label": "Valid To"
+    },
+    {
+      "id": "daysRemaining",
+      "type": "text",
+      "label": "Days Remaining"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "ssl-checker"
+  },
+  "seo": {
+    "title": "SSL Certificate Checker - Verify SSL Security",
+    "description": "Check SSL certificate details and validity for any website.",
+    "keywords": ["ssl checker", "certificate checker", "ssl verification", "https check"]
+  }
+}

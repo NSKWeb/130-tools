@@ -1,0 +1,57 @@
+{
+  "id": "work-days-calculator",
+  "slug": "work-days-calculator",
+  "name": "Work Days Calculator",
+  "description": "Calculate working days between two dates, excluding weekends and holidays.",
+  "shortDesc": "Calculate working days",
+  "category": "misc",
+  "icon": "💼",
+  "inputs": [
+    {
+      "id": "startDate",
+      "type": "date",
+      "label": "Start Date",
+      "placeholder": "Select start date",
+      "required": true
+    },
+    {
+      "id": "endDate",
+      "type": "date",
+      "label": "End Date",
+      "placeholder": "Select end date",
+      "required": true
+    },
+    {
+      "id": "excludeHolidays",
+      "type": "checkbox",
+      "label": "Exclude public holidays",
+      "defaultValue": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "workDays",
+      "type": "text",
+      "label": "Working Days"
+    },
+    {
+      "id": "weekendDays",
+      "type": "text",
+      "label": "Weekend Days"
+    },
+    {
+      "id": "holidays",
+      "type": "text",
+      "label": "Holidays Excluded"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "work-days-calculator"
+  },
+  "seo": {
+    "title": "Work Days Calculator - Calculate Working Days",
+    "description": "Calculate working days between two dates, excluding weekends and holidays.",
+    "keywords": ["work days calculator", "working days", "business days", "calculate work days"]
+  }
+}

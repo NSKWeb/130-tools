@@ -1,0 +1,99 @@
+{
+  "id": "retirement-calculator",
+  "slug": "retirement-calculator",
+  "name": "Retirement Calculator",
+  "description": "Estimate how much you'll have saved by retirement age based on current savings and contributions.",
+  "shortDesc": "Plan for retirement savings",
+  "category": "calculators",
+  "icon": "🏖️",
+  "inputs": [
+    {
+      "id": "currentAge",
+      "type": "number",
+      "label": "Current Age",
+      "placeholder": "Enter your current age",
+      "required": true,
+      "validation": {
+        "min": 18,
+        "max": 90
+      }
+    },
+    {
+      "id": "retirementAge",
+      "type": "number",
+      "label": "Retirement Age",
+      "placeholder": "Enter retirement age",
+      "required": true,
+      "defaultValue": 65,
+      "validation": {
+        "min": 50,
+        "max": 90
+      }
+    },
+    {
+      "id": "currentSavings",
+      "type": "number",
+      "label": "Current Savings ($)",
+      "placeholder": "Enter current retirement savings",
+      "required": true,
+      "defaultValue": 0,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "monthlyContribution",
+      "type": "number",
+      "label": "Monthly Contribution ($)",
+      "placeholder": "Enter monthly contribution",
+      "required": true,
+      "defaultValue": 500,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "expectedReturn",
+      "type": "number",
+      "label": "Expected Annual Return (%)",
+      "placeholder": "Enter expected return",
+      "required": true,
+      "defaultValue": 7,
+      "validation": {
+        "min": 0,
+        "max": 20
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "yearsToRetirement",
+      "type": "text",
+      "label": "Years to Retirement"
+    },
+    {
+      "id": "retirementSavings",
+      "type": "text",
+      "label": "Projected Savings at Retirement"
+    },
+    {
+      "id": "totalContributions",
+      "type": "text",
+      "label": "Total Contributions"
+    },
+    {
+      "id": "totalInterest",
+      "type": "text",
+      "label": "Total Interest Earned"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "retirement-calculator"
+  },
+  "seo": {
+    "title": "Retirement Calculator - Plan Your Retirement Savings",
+    "description": "Calculate how much you'll have saved by retirement and plan your financial future.",
+    "keywords": ["retirement calculator", "retirement planning", "savings calculator", "401k calculator"]
+  }
+}

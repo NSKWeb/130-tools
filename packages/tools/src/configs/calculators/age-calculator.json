@@ -1,0 +1,44 @@
+{
+  "id": "age-calculator",
+  "slug": "age-calculator",
+  "name": "Age Calculator",
+  "description": "Calculate your exact age in years, months, and days based on your birth date.",
+  "shortDesc": "Calculate your exact age",
+  "category": "calculators",
+  "icon": "🎂",
+  "inputs": [
+    {
+      "id": "birthDate",
+      "type": "date",
+      "label": "Birth Date",
+      "placeholder": "Select your birth date",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "years",
+      "type": "text",
+      "label": "Years"
+    },
+    {
+      "id": "months",
+      "type": "text",
+      "label": "Months"
+    },
+    {
+      "id": "days",
+      "type": "text",
+      "label": "Days"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "age-calculator"
+  },
+  "seo": {
+    "title": "Age Calculator - Calculate Your Exact Age",
+    "description": "Find out your exact age in years, months, and days. Perfect for knowing your precise age.",
+    "keywords": ["age calculator", "how old am i", "calculate age", "birthday calculator"]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "area-converter",
+  "slug": "area-converter",
+  "name": "Area Converter",
+  "description": "Convert area measurements between square meters, square feet, acres, hectares, and more.",
+  "shortDesc": "Convert between area units",
+  "category": "converters",
+  "icon": "📐",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Square Millimeters (mm²)", "value": "mm2"},
+        {"label": "Square Centimeters (cm²)", "value": "cm2"},
+        {"label": "Square Meters (m²)", "value": "m2"},
+        {"label": "Hectares (ha)", "value": "ha"},
+        {"label": "Square Kilometers (km²)", "value": "km2"},
+        {"label": "Square Inches (in²)", "value": "in2"},
+        {"label": "Square Feet (ft²)", "value": "ft2"},
+        {"label": "Square Yards (yd²)", "value": "yd2"},
+        {"label": "Acres", "value": "ac"},
+        {"label": "Square Miles (mi²)", "value": "mi2"}
+      ],
+      "required": true,
+      "defaultValue": "m2"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Square Millimeters (mm²)", "value": "mm2"},
+        {"label": "Square Centimeters (cm²)", "value": "cm2"},
+        {"label": "Square Meters (m²)", "value": "m2"},
+        {"label": "Hectares (ha)", "value": "ha"},
+        {"label": "Square Kilometers (km²)", "value": "km2"},
+        {"label": "Square Inches (in²)", "value": "in2"},
+        {"label": "Square Feet (ft²)", "value": "ft2"},
+        {"label": "Square Yards (yd²)", "value": "yd2"},
+        {"label": "Acres", "value": "ac"},
+        {"label": "Square Miles (mi²)", "value": "mi2"}
+      ],
+      "required": true,
+      "defaultValue": "ft2"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Area"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "area-converter"
+  },
+  "seo": {
+    "title": "Area Converter - Convert Area Units",
+    "description": "Convert area between square meters, square feet, acres, hectares, and other area units.",
+    "keywords": ["area converter", "square meters to square feet", "acre converter", "hectare calculator"]
+  }
+}

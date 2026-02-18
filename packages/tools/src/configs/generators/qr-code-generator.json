@@ -1,0 +1,48 @@
+{
+  "id": "qr-code-generator",
+  "slug": "qr-code-generator",
+  "name": "QR Code Generator",
+  "description": "Generate QR codes for URLs, text, or any data instantly. Customize QR code size for your needs.",
+  "shortDesc": "Generate QR codes",
+  "category": "generators",
+  "icon": "📱",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter URL or Text",
+      "placeholder": "https://example.com or any text...",
+      "required": true,
+      "rows": 4
+    },
+    {
+      "id": "size",
+      "type": "select",
+      "label": "QR Code Size",
+      "options": [
+        {"label": "Small (150x150)", "value": "150"},
+        {"label": "Medium (250x250)", "value": "250"},
+        {"label": "Large (350x350)", "value": "350"},
+        {"label": "Extra Large (500x500)", "value": "500"}
+      ],
+      "required": true,
+      "defaultValue": "250"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "qrCodeUrl",
+      "type": "image",
+      "label": "QR Code"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "qr-code-generator"
+  },
+  "seo": {
+    "title": "QR Code Generator - Create Free QR Codes",
+    "description": "Generate QR codes for URLs, text, or any content. Customizable sizes for printing and sharing.",
+    "keywords": ["qr code generator", "create qr code", "free qr code", "qr code maker"]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sort-lines",
+  "slug": "sort-lines",
+  "name": "Sort Lines",
+  "description": "Sort lines alphabetically in ascending or descending order, with options for case sensitivity.",
+  "shortDesc": "Sort text lines",
+  "category": "text-tools",
+  "icon": "📋",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text (one item per line)",
+      "placeholder": "Enter one item per line...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "order",
+      "type": "select",
+      "label": "Sort Order",
+      "options": [
+        {"label": "Ascending (A-Z)", "value": "asc"},
+        {"label": "Descending (Z-A)", "value": "desc"}
+      ],
+      "required": true,
+      "defaultValue": "asc"
+    },
+    {
+      "id": "caseSensitive",
+      "type": "checkbox",
+      "label": "Case sensitive",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Sorted Lines"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "sort-lines"
+  },
+  "seo": {
+    "title": "Sort Lines - Sort Text Lines Alphabetically",
+    "description": "Sort lines of text alphabetically in ascending or descending order.",
+    "keywords": ["sort lines", "sort text", "alphabetical sort", "text sorter"]
+  }
+}

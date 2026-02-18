@@ -1,0 +1,51 @@
+{
+  "id": "json-formatter",
+  "slug": "json-formatter",
+  "name": "JSON Formatter",
+  "description": "Format, validate, and beautify JSON data. Minify or pretty-print JSON with syntax highlighting.",
+  "shortDesc": "Format and validate JSON",
+  "category": "developer-tools",
+  "icon": "🔧",
+  "inputs": [
+    {
+      "id": "json",
+      "type": "textarea",
+      "label": "Enter JSON",
+      "placeholder": "Paste your JSON here...",
+      "required": true,
+      "rows": 15
+    },
+    {
+      "id": "minify",
+      "type": "checkbox",
+      "label": "Minify (remove all whitespace)",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Formatted JSON"
+    },
+    {
+      "id": "valid",
+      "type": "text",
+      "label": "Valid"
+    },
+    {
+      "id": "error",
+      "type": "text",
+      "label": "Error"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "json-formatter"
+  },
+  "seo": {
+    "title": "JSON Formatter - Format, Validate & Beautify JSON",
+    "description": "Free JSON formatter and validator. Pretty print or minify your JSON data instantly.",
+    "keywords": ["json formatter", "json beautifier", "json validator", "pretty print json"]
+  }
+}

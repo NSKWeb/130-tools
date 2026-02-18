@@ -1,0 +1,60 @@
+{
+  "id": "word-counter",
+  "slug": "word-counter",
+  "name": "Word Counter",
+  "description": "Count words, characters, sentences, and paragraphs in your text. Get detailed statistics about your content.",
+  "shortDesc": "Count words and characters",
+  "category": "text-tools",
+  "icon": "📝",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Your Text",
+      "placeholder": "Type or paste your text here...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "words",
+      "type": "text",
+      "label": "Words"
+    },
+    {
+      "id": "characters",
+      "type": "text",
+      "label": "Characters"
+    },
+    {
+      "id": "charactersNoSpaces",
+      "type": "text",
+      "label": "Characters (no spaces)"
+    },
+    {
+      "id": "sentences",
+      "type": "text",
+      "label": "Sentences"
+    },
+    {
+      "id": "paragraphs",
+      "type": "text",
+      "label": "Paragraphs"
+    },
+    {
+      "id": "avgWordLength",
+      "type": "text",
+      "label": "Avg Word Length"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "word-counter"
+  },
+  "seo": {
+    "title": "Word Counter - Count Words, Characters & More",
+    "description": "Free online word counter. Count words, characters, sentences, and paragraphs in your text instantly.",
+    "keywords": ["word counter", "character counter", "word count tool", "text counter"]
+  }
+}

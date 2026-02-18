@@ -1,0 +1,45 @@
+{
+  "id": "line-counter",
+  "slug": "line-counter",
+  "name": "Line Counter",
+  "description": "Count the number of lines in your text with statistics about empty and non-empty lines.",
+  "shortDesc": "Count text lines",
+  "category": "text-tools",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Type or paste your text here...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalLines",
+      "type": "text",
+      "label": "Total Lines"
+    },
+    {
+      "id": "nonEmptyLines",
+      "type": "text",
+      "label": "Non-Empty Lines"
+    },
+    {
+      "id": "emptyLines",
+      "type": "text",
+      "label": "Empty Lines"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "line-counter"
+  },
+  "seo": {
+    "title": "Line Counter - Count Lines in Text",
+    "description": "Count total lines, empty lines, and non-empty lines in your text.",
+    "keywords": ["line counter", "count lines", "text line analyzer", "line count"]
+  }
+}

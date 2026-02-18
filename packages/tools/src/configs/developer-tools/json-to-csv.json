@@ -1,0 +1,35 @@
+{
+  "id": "json-to-csv",
+  "slug": "json-to-csv",
+  "name": "JSON to CSV Converter",
+  "description": "Convert JSON array data to CSV format for spreadsheets.",
+  "shortDesc": "Convert JSON to CSV",
+  "category": "developer-tools",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "json",
+      "type": "textarea",
+      "label": "Enter JSON Array",
+      "placeholder": "Paste your JSON array here...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "CSV Output"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "json-to-csv"
+  },
+  "seo": {
+    "title": "JSON to CSV Converter - Convert JSON to CSV",
+    "description": "Convert JSON array data to CSV format for Excel and spreadsheet applications.",
+    "keywords": ["json to csv", "convert json", "csv converter", "json converter"]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "image-alt-checker",
+  "slug": "image-alt-checker",
+  "name": "Image Alt Text Checker",
+  "description": "Check for missing alt text on images in your HTML content.",
+  "shortDesc": "Check image alt text",
+  "category": "seo-tools",
+  "icon": "🖼️",
+  "inputs": [
+    {
+      "id": "html",
+      "type": "textarea",
+      "label": "HTML Content",
+      "placeholder": "Paste your HTML content...",
+      "required": true,
+      "rows": 15
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalImages",
+      "type": "text",
+      "label": "Total Images"
+    },
+    {
+      "id": "withAlt",
+      "type": "text",
+      "label": "Images with Alt Text"
+    },
+    {
+      "id": "missingAlt",
+      "type": "json",
+      "label": "Images Missing Alt Text"
+    },
+    {
+      "id": "score",
+      "type": "text",
+      "label": "Alt Text Score"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "image-alt-checker"
+  },
+  "seo": {
+    "title": "Image Alt Text Checker - Find Missing Alt Text",
+    "description": "Check for missing alt text on images for better SEO and accessibility.",
+    "keywords": ["alt text checker", "image alt", "seo images", "alt tag checker"]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "meta-tag-analyzer",
+  "slug": "meta-tag-analyzer",
+  "name": "Meta Tag Analyzer",
+  "description": "Analyze meta tags of any webpage for SEO optimization.",
+  "shortDesc": "Analyze webpage meta tags",
+  "category": "seo-tools",
+  "icon": "🔍",
+  "inputs": [
+    {
+      "id": "url",
+      "type": "text",
+      "label": "Website URL",
+      "placeholder": "https://example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Title"
+    },
+    {
+      "id": "description",
+      "type": "text",
+      "label": "Meta Description"
+    },
+    {
+      "id": "keywords",
+      "type": "text",
+      "label": "Keywords"
+    },
+    {
+      "id": "ogTags",
+      "type": "json",
+      "label": "Open Graph Tags"
+    },
+    {
+      "id": "score",
+      "type": "text",
+      "label": "SEO Score"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "meta-tag-analyzer"
+  },
+  "seo": {
+    "title": "Meta Tag Analyzer - Analyze Webpage Meta Tags",
+    "description": "Analyze meta tags, title, description, and Open Graph tags for SEO optimization.",
+    "keywords": ["meta tag analyzer", "seo analyzer", "meta tags", "check meta tags"]
+  }
+}

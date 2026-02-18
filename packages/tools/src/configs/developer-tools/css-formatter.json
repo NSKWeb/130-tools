@@ -1,0 +1,41 @@
+{
+  "id": "css-formatter",
+  "slug": "css-formatter",
+  "name": "CSS Formatter",
+  "description": "Format, beautify, and minify CSS code for development or production.",
+  "shortDesc": "Format CSS code",
+  "category": "developer-tools",
+  "icon": "🎨",
+  "inputs": [
+    {
+      "id": "css",
+      "type": "textarea",
+      "label": "Enter CSS",
+      "placeholder": "Paste your CSS code here...",
+      "required": true,
+      "rows": 15
+    },
+    {
+      "id": "minify",
+      "type": "checkbox",
+      "label": "Minify (compress)",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Formatted CSS"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "css-formatter"
+  },
+  "seo": {
+    "title": "CSS Formatter - Format and Minify CSS",
+    "description": "Format and beautify CSS code or minify it for production use.",
+    "keywords": ["css formatter", "css beautifier", "minify css", "format css"]
+  }
+}

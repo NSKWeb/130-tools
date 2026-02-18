@@ -1,0 +1,45 @@
+{
+  "id": "sentence-counter",
+  "slug": "sentence-counter",
+  "name": "Sentence Counter",
+  "description": "Count sentences and get detailed statistics about sentence length and structure.",
+  "shortDesc": "Count sentences in text",
+  "category": "text-tools",
+  "icon": "📄",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Type or paste your text here...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sentences",
+      "type": "text",
+      "label": "Sentences"
+    },
+    {
+      "id": "avgWordsPerSentence",
+      "type": "text",
+      "label": "Avg Words per Sentence"
+    },
+    {
+      "id": "avgCharsPerSentence",
+      "type": "text",
+      "label": "Avg Characters per Sentence"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "sentence-counter"
+  },
+  "seo": {
+    "title": "Sentence Counter - Count Sentences in Text",
+    "description": "Count sentences and get statistics about sentence length and structure in your text.",
+    "keywords": ["sentence counter", "count sentences", "sentence analyzer", "text statistics"]
+  }
+}

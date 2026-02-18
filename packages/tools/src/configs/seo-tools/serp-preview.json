@@ -1,0 +1,59 @@
+{
+  "id": "serp-preview",
+  "slug": "serp-preview",
+  "name": "SERP Preview",
+  "description": "Preview how your webpage will appear in Google search results.",
+  "shortDesc": "Preview search results",
+  "category": "seo-tools",
+  "icon": "🔎",
+  "inputs": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Page Title",
+      "placeholder": "Enter your page title",
+      "required": true
+    },
+    {
+      "id": "description",
+      "type": "textarea",
+      "label": "Meta Description",
+      "placeholder": "Enter meta description",
+      "required": true,
+      "rows": 3
+    },
+    {
+      "id": "url",
+      "type": "text",
+      "label": "URL",
+      "placeholder": "https://example.com/page",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "preview",
+      "type": "text",
+      "label": "SERP Preview"
+    },
+    {
+      "id": "titleLength",
+      "type": "text",
+      "label": "Title Length"
+    },
+    {
+      "id": "descriptionLength",
+      "type": "text",
+      "label": "Description Length"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "serp-preview"
+  },
+  "seo": {
+    "title": "SERP Preview - Preview Google Search Results",
+    "description": "Preview how your webpage will appear in Google search results.",
+    "keywords": ["serp preview", "google preview", "search preview", "seo preview"]
+  }
+}

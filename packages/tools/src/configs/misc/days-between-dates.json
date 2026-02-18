@@ -1,0 +1,67 @@
+{
+  "id": "days-between-dates",
+  "slug": "days-between-dates",
+  "name": "Days Between Dates",
+  "description": "Calculate the number of days, weeks, months, and years between two dates.",
+  "shortDesc": "Calculate days between dates",
+  "category": "misc",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "startDate",
+      "type": "date",
+      "label": "Start Date",
+      "placeholder": "Select start date",
+      "required": true
+    },
+    {
+      "id": "endDate",
+      "type": "date",
+      "label": "End Date",
+      "placeholder": "Select end date",
+      "required": true
+    },
+    {
+      "id": "includeEnd",
+      "type": "checkbox",
+      "label": "Include end date in count",
+      "defaultValue": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "days",
+      "type": "text",
+      "label": "Days"
+    },
+    {
+      "id": "weeks",
+      "type": "text",
+      "label": "Weeks"
+    },
+    {
+      "id": "months",
+      "type": "text",
+      "label": "Months (approximate)"
+    },
+    {
+      "id": "years",
+      "type": "text",
+      "label": "Years (approximate)"
+    },
+    {
+      "id": "businessDays",
+      "type": "text",
+      "label": "Business Days"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "days-between-dates"
+  },
+  "seo": {
+    "title": "Days Between Dates Calculator",
+    "description": "Calculate the number of days, weeks, months, and business days between two dates.",
+    "keywords": ["days between dates", "date difference", "calculate days", "date calculator"]
+  }
+}

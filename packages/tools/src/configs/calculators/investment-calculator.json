@@ -1,0 +1,82 @@
+{
+  "id": "investment-calculator",
+  "slug": "investment-calculator",
+  "name": "Investment Calculator",
+  "description": "Calculate investment growth with compound interest over time.",
+  "shortDesc": "Calculate investment growth",
+  "category": "calculators",
+  "icon": "📈",
+  "inputs": [
+    {
+      "id": "principal",
+      "type": "number",
+      "label": "Initial Investment ($)",
+      "placeholder": "Enter initial amount",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "monthlyContribution",
+      "type": "number",
+      "label": "Monthly Contribution ($)",
+      "placeholder": "Enter monthly contribution",
+      "required": false,
+      "defaultValue": 0,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "rate",
+      "type": "number",
+      "label": "Annual Return Rate (%)",
+      "placeholder": "Enter expected return rate",
+      "required": true,
+      "defaultValue": 7,
+      "validation": {
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "years",
+      "type": "number",
+      "label": "Investment Period (years)",
+      "placeholder": "Enter number of years",
+      "required": true,
+      "defaultValue": 10,
+      "validation": {
+        "min": 1,
+        "max": 100
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalValue",
+      "type": "text",
+      "label": "Total Value"
+    },
+    {
+      "id": "totalContributions",
+      "type": "text",
+      "label": "Total Contributions"
+    },
+    {
+      "id": "totalInterest",
+      "type": "text",
+      "label": "Total Interest Earned"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "investment-calculator"
+  },
+  "seo": {
+    "title": "Investment Calculator - Calculate Returns with Compound Interest",
+    "description": "Calculate investment growth with compound interest and monthly contributions.",
+    "keywords": ["investment calculator", "compound interest calculator", "investment returns", "savings calculator"]
+  }
+}

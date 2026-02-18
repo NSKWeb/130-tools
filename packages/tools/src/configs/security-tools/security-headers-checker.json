@@ -1,0 +1,44 @@
+{
+  "id": "security-headers-checker",
+  "slug": "security-headers-checker",
+  "name": "Security Headers Checker",
+  "description": "Check if a website has proper security headers implemented.",
+  "shortDesc": "Check security headers",
+  "category": "security-tools",
+  "icon": "🛡️",
+  "inputs": [
+    {
+      "id": "url",
+      "type": "text",
+      "label": "Website URL",
+      "placeholder": "https://example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "score",
+      "type": "text",
+      "label": "Security Score"
+    },
+    {
+      "id": "headers",
+      "type": "json",
+      "label": "Header Status"
+    },
+    {
+      "id": "recommendations",
+      "type": "text",
+      "label": "Recommendations"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "security-headers-checker"
+  },
+  "seo": {
+    "title": "Security Headers Checker - Test HTTP Security Headers",
+    "description": "Check if a website has proper security headers like CSP, HSTS, X-Frame-Options.",
+    "keywords": ["security headers checker", "http security headers", "security scan", "header analysis"]
+  }
+}

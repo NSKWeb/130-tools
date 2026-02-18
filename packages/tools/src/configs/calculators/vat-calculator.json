@@ -1,0 +1,65 @@
+{
+  "id": "vat-calculator",
+  "slug": "vat-calculator",
+  "name": "VAT Calculator",
+  "description": "Calculate VAT (Value Added Tax) on prices - add or remove VAT.",
+  "shortDesc": "Calculate VAT",
+  "category": "calculators",
+  "icon": "💷",
+  "inputs": [
+    {
+      "id": "amount",
+      "type": "number",
+      "label": "Amount ($)",
+      "placeholder": "Enter amount",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "vatRate",
+      "type": "number",
+      "label": "VAT Rate (%)",
+      "placeholder": "Enter VAT rate",
+      "required": true,
+      "defaultValue": 20,
+      "validation": {
+        "min": 0,
+        "max": 30
+      }
+    },
+    {
+      "id": "operation",
+      "type": "select",
+      "label": "Operation",
+      "options": [
+        {"label": "Add VAT", "value": "add"},
+        {"label": "Remove VAT", "value": "remove"}
+      ],
+      "required": true,
+      "defaultValue": "add"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "vatAmount",
+      "type": "text",
+      "label": "VAT Amount"
+    },
+    {
+      "id": "totalAmount",
+      "type": "text",
+      "label": "Total Amount"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "vat-calculator"
+  },
+  "seo": {
+    "title": "VAT Calculator - Calculate Value Added Tax",
+    "description": "Calculate VAT amounts - add or remove VAT from prices with custom rates.",
+    "keywords": ["vat calculator", "value added tax", "vat calculation", "tax calculator"]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "compound-interest-calculator",
+  "slug": "compound-interest-calculator",
+  "name": "Compound Interest Calculator",
+  "description": "Calculate compound interest earned on investments with customizable compounding frequency.",
+  "shortDesc": "Calculate compound interest",
+  "category": "calculators",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "principal",
+      "type": "number",
+      "label": "Principal Amount ($)",
+      "placeholder": "Enter principal amount",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "rate",
+      "type": "number",
+      "label": "Annual Interest Rate (%)",
+      "placeholder": "Enter interest rate",
+      "required": true,
+      "validation": {
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "time",
+      "type": "number",
+      "label": "Time Period (years)",
+      "placeholder": "Enter time period",
+      "required": true,
+      "validation": {
+        "min": 1
+      }
+    },
+    {
+      "id": "compoundFrequency",
+      "type": "select",
+      "label": "Compounding Frequency",
+      "options": [
+        {"label": "Annually", "value": 1},
+        {"label": "Semi-Annually", "value": 2},
+        {"label": "Quarterly", "value": 4},
+        {"label": "Monthly", "value": 12},
+        {"label": "Daily", "value": 365}
+      ],
+      "required": true,
+      "defaultValue": "12"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "finalAmount",
+      "type": "text",
+      "label": "Final Amount"
+    },
+    {
+      "id": "interestEarned",
+      "type": "text",
+      "label": "Interest Earned"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "compound-interest-calculator"
+  },
+  "seo": {
+    "title": "Compound Interest Calculator - Calculate Compound Growth",
+    "description": "Calculate compound interest earned on investments with customizable compounding frequency.",
+    "keywords": ["compound interest calculator", "compound interest", "investment growth", "interest calculator"]
+  }
+}

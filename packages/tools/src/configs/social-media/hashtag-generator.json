@@ -1,0 +1,61 @@
+{
+  "id": "hashtag-generator",
+  "slug": "hashtag-generator",
+  "name": "Hashtag Generator",
+  "description": "Generate relevant hashtags for social media posts based on your content.",
+  "shortDesc": "Generate social media hashtags",
+  "category": "social-media",
+  "icon": "#️⃣",
+  "inputs": [
+    {
+      "id": "content",
+      "type": "textarea",
+      "label": "Post Content",
+      "placeholder": "Enter your post content or topic...",
+      "required": true,
+      "rows": 6
+    },
+    {
+      "id": "platform",
+      "type": "select",
+      "label": "Platform",
+      "options": [
+        {"label": "Instagram", "value": "instagram"},
+        {"label": "Twitter", "value": "twitter"},
+        {"label": "TikTok", "value": "tiktok"},
+        {"label": "LinkedIn", "value": "linkedin"},
+        {"label": "Facebook", "value": "facebook"}
+      ],
+      "required": true,
+      "defaultValue": "instagram"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Hashtags",
+      "placeholder": "How many hashtags?",
+      "required": true,
+      "defaultValue": 15,
+      "validation": {
+        "min": 1,
+        "max": 30
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hashtags",
+      "type": "text",
+      "label": "Generated Hashtags"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "hashtag-generator"
+  },
+  "seo": {
+    "title": "Hashtag Generator - Generate Social Media Hashtags",
+    "description": "Generate relevant hashtags for Instagram, Twitter, TikTok, and other platforms.",
+    "keywords": ["hashtag generator", "instagram hashtags", "twitter hashtags", "social media hashtags"]
+  }
+}

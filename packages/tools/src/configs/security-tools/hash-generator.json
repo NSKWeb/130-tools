@@ -1,0 +1,48 @@
+{
+  "id": "hash-generator",
+  "slug": "hash-generator",
+  "name": "Hash Generator",
+  "description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text.",
+  "shortDesc": "Generate hash values",
+  "category": "security-tools",
+  "icon": "🔐",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Enter text to hash...",
+      "required": true,
+      "rows": 6
+    },
+    {
+      "id": "algorithm",
+      "type": "select",
+      "label": "Hash Algorithm",
+      "options": [
+        {"label": "MD5", "value": "md5"},
+        {"label": "SHA-1", "value": "sha1"},
+        {"label": "SHA-256", "value": "sha256"},
+        {"label": "SHA-512", "value": "sha512"}
+      ],
+      "required": true,
+      "defaultValue": "sha256"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hash",
+      "type": "text",
+      "label": "Hash Value"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "hash-generator"
+  },
+  "seo": {
+    "title": "Hash Generator - Create MD5, SHA Hashes",
+    "description": "Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from any text.",
+    "keywords": ["hash generator", "md5 generator", "sha256 generator", "create hash"]
+  }
+}

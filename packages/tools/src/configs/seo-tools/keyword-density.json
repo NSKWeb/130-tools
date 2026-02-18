@@ -1,0 +1,57 @@
+{
+  "id": "keyword-density",
+  "slug": "keyword-density",
+  "name": "Keyword Density Checker",
+  "description": "Check keyword density in your content for SEO optimization.",
+  "shortDesc": "Check keyword density",
+  "category": "seo-tools",
+  "icon": "📊",
+  "inputs": [
+    {
+      "id": "content",
+      "type": "textarea",
+      "label": "Content",
+      "placeholder": "Paste your content here...",
+      "required": true,
+      "rows": 15
+    },
+    {
+      "id": "keyword",
+      "type": "text",
+      "label": "Target Keyword",
+      "placeholder": "Enter keyword to check",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "density",
+      "type": "text",
+      "label": "Keyword Density"
+    },
+    {
+      "id": "count",
+      "type": "text",
+      "label": "Keyword Count"
+    },
+    {
+      "id": "totalWords",
+      "type": "text",
+      "label": "Total Words"
+    },
+    {
+      "id": "recommendation",
+      "type": "text",
+      "label": "Recommendation"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "keyword-density"
+  },
+  "seo": {
+    "title": "Keyword Density Checker - Analyze Keyword Usage",
+    "description": "Check keyword density in your content for proper SEO optimization.",
+    "keywords": ["keyword density", "keyword checker", "seo keywords", "keyword analysis"]
+  }
+}

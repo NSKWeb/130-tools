@@ -1,0 +1,69 @@
+{
+  "id": "time-converter",
+  "slug": "time-converter",
+  "name": "Time Converter",
+  "description": "Convert time measurements between seconds, minutes, hours, days, weeks, and years.",
+  "shortDesc": "Convert between time units",
+  "category": "converters",
+  "icon": "⏱️",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Seconds", "value": "seconds"},
+        {"label": "Minutes", "value": "minutes"},
+        {"label": "Hours", "value": "hours"},
+        {"label": "Days", "value": "days"},
+        {"label": "Weeks", "value": "weeks"},
+        {"label": "Months", "value": "months"},
+        {"label": "Years", "value": "years"}
+      ],
+      "required": true,
+      "defaultValue": "hours"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Seconds", "value": "seconds"},
+        {"label": "Minutes", "value": "minutes"},
+        {"label": "Hours", "value": "hours"},
+        {"label": "Days", "value": "days"},
+        {"label": "Weeks", "value": "weeks"},
+        {"label": "Months", "value": "months"},
+        {"label": "Years", "value": "years"}
+      ],
+      "required": true,
+      "defaultValue": "days"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Time"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "time-converter"
+  },
+  "seo": {
+    "title": "Time Converter - Convert Time Units",
+    "description": "Convert time between seconds, minutes, hours, days, weeks, and years.",
+    "keywords": ["time converter", "hours to days", "minutes to seconds", "time calculator"]
+  }
+}

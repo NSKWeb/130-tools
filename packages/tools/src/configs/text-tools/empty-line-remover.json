@@ -1,0 +1,40 @@
+{
+  "id": "empty-line-remover",
+  "slug": "empty-line-remover",
+  "name": "Empty Line Remover",
+  "description": "Remove all empty lines from text while preserving content structure.",
+  "shortDesc": "Remove empty lines",
+  "category": "text-tools",
+  "icon": "🗑️",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Paste text with empty lines...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Text Without Empty Lines"
+    },
+    {
+      "id": "removed",
+      "type": "text",
+      "label": "Empty Lines Removed"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "empty-line-remover"
+  },
+  "seo": {
+    "title": "Empty Line Remover - Remove Blank Lines",
+    "description": "Remove all empty and blank lines from your text instantly.",
+    "keywords": ["empty line remover", "remove blank lines", "clean text", "remove whitespace"]
+  }
+}

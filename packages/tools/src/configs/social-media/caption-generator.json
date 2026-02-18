@@ -1,0 +1,74 @@
+{
+  "id": "caption-generator",
+  "slug": "caption-generator",
+  "name": "Caption Generator",
+  "description": "Generate engaging captions for social media posts.",
+  "shortDesc": "Generate social media captions",
+  "category": "social-media",
+  "icon": "💬",
+  "inputs": [
+    {
+      "id": "topic",
+      "type": "text",
+      "label": "Post Topic",
+      "placeholder": "What is your post about?",
+      "required": true
+    },
+    {
+      "id": "platform",
+      "type": "select",
+      "label": "Platform",
+      "options": [
+        {"label": "Instagram", "value": "instagram"},
+        {"label": "Twitter", "value": "twitter"},
+        {"label": "Facebook", "value": "facebook"},
+        {"label": "LinkedIn", "value": "linkedin"},
+        {"label": "TikTok", "value": "tiktok"}
+      ],
+      "required": true,
+      "defaultValue": "instagram"
+    },
+    {
+      "id": "tone",
+      "type": "select",
+      "label": "Tone",
+      "options": [
+        {"label": "Professional", "value": "professional"},
+        {"label": "Casual", "value": "casual"},
+        {"label": "Funny", "value": "funny"},
+        {"label": "Inspirational", "value": "inspirational"},
+        {"label": "Engaging", "value": "engaging"}
+      ],
+      "required": true,
+      "defaultValue": "engaging"
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number of Captions",
+      "placeholder": "How many captions?",
+      "required": true,
+      "defaultValue": 5,
+      "validation": {
+        "min": 1,
+        "max": 10
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "captions",
+      "type": "json",
+      "label": "Generated Captions"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "caption-generator"
+  },
+  "seo": {
+    "title": "Caption Generator - Create Social Media Captions",
+    "description": "Generate engaging captions for your social media posts on any platform.",
+    "keywords": ["caption generator", "social media captions", "instagram captions", "post captions"]
+  }
+}

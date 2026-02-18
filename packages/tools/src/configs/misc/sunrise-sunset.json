@@ -1,0 +1,71 @@
+{
+  "id": "sunrise-sunset",
+  "slug": "sunrise-sunset",
+  "name": "Sunrise & Sunset Calculator",
+  "description": "Calculate sunrise and sunset times for any location and date.",
+  "shortDesc": "Calculate sunrise and sunset",
+  "category": "misc",
+  "icon": "🌅",
+  "inputs": [
+    {
+      "id": "date",
+      "type": "date",
+      "label": "Date",
+      "placeholder": "Select date",
+      "required": true
+    },
+    {
+      "id": "latitude",
+      "type": "number",
+      "label": "Latitude",
+      "placeholder": "e.g., 40.7128",
+      "required": true,
+      "validation": {
+        "min": -90,
+        "max": 90
+      }
+    },
+    {
+      "id": "longitude",
+      "type": "number",
+      "label": "Longitude",
+      "placeholder": "e.g., -74.0060",
+      "required": true,
+      "validation": {
+        "min": -180,
+        "max": 180
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sunrise",
+      "type": "text",
+      "label": "Sunrise"
+    },
+    {
+      "id": "sunset",
+      "type": "text",
+      "label": "Sunset"
+    },
+    {
+      "id": "daylight",
+      "type": "text",
+      "label": "Daylight Hours"
+    },
+    {
+      "id": "solarNoon",
+      "type": "text",
+      "label": "Solar Noon"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "sunrise-sunset"
+  },
+  "seo": {
+    "title": "Sunrise & Sunset Calculator",
+    "description": "Calculate sunrise and sunset times for any location and date.",
+    "keywords": ["sunrise sunset", "sun times", "daylight calculator", "sun calculator"]
+  }
+}

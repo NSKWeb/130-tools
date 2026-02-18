@@ -1,0 +1,51 @@
+{
+  "id": "case-converter",
+  "slug": "case-converter",
+  "name": "Case Converter",
+  "description": "Convert text between uppercase, lowercase, title case, sentence case, camel case, snake case, and kebab case.",
+  "shortDesc": "Convert text case",
+  "category": "text-tools",
+  "icon": "🔠",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Type or paste your text here...",
+      "required": true,
+      "rows": 8
+    },
+    {
+      "id": "type",
+      "type": "select",
+      "label": "Conversion Type",
+      "options": [
+        {"label": "UPPERCASE", "value": "uppercase"},
+        {"label": "lowercase", "value": "lowercase"},
+        {"label": "Title Case", "value": "titlecase"},
+        {"label": "Sentence case", "value": "sentencecase"},
+        {"label": "camelCase", "value": "camelcase"},
+        {"label": "snake_case", "value": "snakecase"},
+        {"label": "kebab-case", "value": "kebabcase"}
+      ],
+      "required": true,
+      "defaultValue": "uppercase"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "textarea",
+      "label": "Converted Text"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "case-converter"
+  },
+  "seo": {
+    "title": "Case Converter - Convert Text Case Instantly",
+    "description": "Convert text to uppercase, lowercase, title case, camel case, snake case, and more.",
+    "keywords": ["case converter", "uppercase to lowercase", "title case", "camel case converter"]
+  }
+}

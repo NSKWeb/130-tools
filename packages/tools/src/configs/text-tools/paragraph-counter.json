@@ -1,0 +1,45 @@
+{
+  "id": "paragraph-counter",
+  "slug": "paragraph-counter",
+  "name": "Paragraph Counter",
+  "description": "Count paragraphs and analyze paragraph structure in your text.",
+  "shortDesc": "Count paragraphs",
+  "category": "text-tools",
+  "icon": "📝",
+  "inputs": [
+    {
+      "id": "text",
+      "type": "textarea",
+      "label": "Enter Text",
+      "placeholder": "Type or paste your text here...",
+      "required": true,
+      "rows": 10
+    }
+  ],
+  "outputs": [
+    {
+      "id": "paragraphs",
+      "type": "text",
+      "label": "Paragraphs"
+    },
+    {
+      "id": "avgSentencesPerParagraph",
+      "type": "text",
+      "label": "Avg Sentences per Paragraph"
+    },
+    {
+      "id": "avgWordsPerParagraph",
+      "type": "text",
+      "label": "Avg Words per Paragraph"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "paragraph-counter"
+  },
+  "seo": {
+    "title": "Paragraph Counter - Count Paragraphs in Text",
+    "description": "Count paragraphs and analyze paragraph structure and statistics.",
+    "keywords": ["paragraph counter", "count paragraphs", "paragraph analyzer", "text structure"]
+  }
+}

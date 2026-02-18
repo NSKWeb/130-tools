@@ -1,0 +1,49 @@
+{
+  "id": "cors-checker",
+  "slug": "cors-checker",
+  "name": "CORS Checker",
+  "description": "Check Cross-Origin Resource Sharing (CORS) configuration for a website.",
+  "shortDesc": "Check CORS configuration",
+  "category": "security-tools",
+  "icon": "🌐",
+  "inputs": [
+    {
+      "id": "url",
+      "type": "text",
+      "label": "Website URL",
+      "placeholder": "https://example.com",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "corsEnabled",
+      "type": "text",
+      "label": "CORS Enabled"
+    },
+    {
+      "id": "allowOrigin",
+      "type": "text",
+      "label": "Access-Control-Allow-Origin"
+    },
+    {
+      "id": "allowMethods",
+      "type": "text",
+      "label": "Access-Control-Allow-Methods"
+    },
+    {
+      "id": "allowHeaders",
+      "type": "text",
+      "label": "Access-Control-Allow-Headers"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "cors-checker"
+  },
+  "seo": {
+    "title": "CORS Checker - Check Cross-Origin Resource Sharing",
+    "description": "Check CORS configuration and headers for any website.",
+    "keywords": ["cors checker", "cross origin", "cors test", "cors headers"]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "random-picker",
+  "slug": "random-picker",
+  "name": "Random Picker",
+  "description": "Pick random items from a list. Perfect for contests, giveaways, and decisions.",
+  "shortDesc": "Pick random items",
+  "category": "generators",
+  "icon": "🎲",
+  "inputs": [
+    {
+      "id": "items",
+      "type": "textarea",
+      "label": "Items (one per line)",
+      "placeholder": "Enter items one per line...",
+      "required": true,
+      "rows": 10
+    },
+    {
+      "id": "count",
+      "type": "number",
+      "label": "Number to Pick",
+      "placeholder": "How many to pick?",
+      "required": true,
+      "defaultValue": 1,
+      "validation": {
+        "min": 1,
+        "max": 100
+      }
+    },
+    {
+      "id": "unique",
+      "type": "checkbox",
+      "label": "Unique items only (no repeats)",
+      "defaultValue": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "picked",
+      "type": "text",
+      "label": "Picked Items"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "random-picker"
+  },
+  "seo": {
+    "title": "Random Picker - Pick Random Items",
+    "description": "Pick random items from a list. Perfect for contests, decisions, and giveaways.",
+    "keywords": ["random picker", "random selector", "pick random", "random choice"]
+  }
+}

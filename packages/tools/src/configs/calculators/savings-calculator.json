@@ -1,0 +1,97 @@
+{
+  "id": "savings-calculator",
+  "slug": "savings-calculator",
+  "name": "Savings Calculator",
+  "description": "Calculate how your savings will grow over time with regular contributions and compound interest.",
+  "shortDesc": "Calculate savings growth",
+  "category": "calculators",
+  "icon": "🐷",
+  "inputs": [
+    {
+      "id": "initialDeposit",
+      "type": "number",
+      "label": "Initial Deposit ($)",
+      "placeholder": "Enter initial deposit",
+      "required": true,
+      "defaultValue": 1000,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "monthlyContribution",
+      "type": "number",
+      "label": "Monthly Contribution ($)",
+      "placeholder": "Enter monthly contribution",
+      "required": true,
+      "defaultValue": 100,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "interestRate",
+      "type": "number",
+      "label": "Annual Interest Rate (%)",
+      "placeholder": "Enter interest rate",
+      "required": true,
+      "defaultValue": 5,
+      "validation": {
+        "min": 0,
+        "max": 30
+      }
+    },
+    {
+      "id": "years",
+      "type": "number",
+      "label": "Number of Years",
+      "placeholder": "Enter years",
+      "required": true,
+      "defaultValue": 10,
+      "validation": {
+        "min": 1,
+        "max": 50
+      }
+    },
+    {
+      "id": "compoundFrequency",
+      "type": "select",
+      "label": "Compound Frequency",
+      "options": [
+        {"label": "Annually", "value": 1},
+        {"label": "Semi-Annually", "value": 2},
+        {"label": "Quarterly", "value": 4},
+        {"label": "Monthly", "value": 12},
+        {"label": "Daily", "value": 365}
+      ],
+      "required": true,
+      "defaultValue": "12"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "finalBalance",
+      "type": "text",
+      "label": "Final Balance"
+    },
+    {
+      "id": "totalContributions",
+      "type": "text",
+      "label": "Total Contributions"
+    },
+    {
+      "id": "totalInterest",
+      "type": "text",
+      "label": "Total Interest Earned"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "savings-calculator"
+  },
+  "seo": {
+    "title": "Savings Calculator - Calculate Savings Growth",
+    "description": "Calculate how your savings will grow with compound interest and regular contributions.",
+    "keywords": ["savings calculator", "compound interest", "savings growth", "interest calculator"]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "profit-calculator",
+  "slug": "profit-calculator",
+  "name": "Profit Calculator",
+  "description": "Calculate gross profit, net profit, and profit margin from revenue and costs.",
+  "shortDesc": "Calculate business profit",
+  "category": "calculators",
+  "icon": "💹",
+  "inputs": [
+    {
+      "id": "revenue",
+      "type": "number",
+      "label": "Total Revenue ($)",
+      "placeholder": "Enter total revenue",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "costOfGoodsSold",
+      "type": "number",
+      "label": "Cost of Goods Sold ($)",
+      "placeholder": "Enter COGS",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "operatingExpenses",
+      "type": "number",
+      "label": "Operating Expenses ($)",
+      "placeholder": "Enter operating expenses",
+      "required": false,
+      "defaultValue": 0,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "taxes",
+      "type": "number",
+      "label": "Taxes ($)",
+      "placeholder": "Enter taxes",
+      "required": false,
+      "defaultValue": 0,
+      "validation": {
+        "min": 0
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "grossProfit",
+      "type": "text",
+      "label": "Gross Profit"
+    },
+    {
+      "id": "grossMargin",
+      "type": "text",
+      "label": "Gross Margin (%)"
+    },
+    {
+      "id": "operatingProfit",
+      "type": "text",
+      "label": "Operating Profit"
+    },
+    {
+      "id": "netProfit",
+      "type": "text",
+      "label": "Net Profit"
+    },
+    {
+      "id": "netMargin",
+      "type": "text",
+      "label": "Net Margin (%)"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "profit-calculator"
+  },
+  "seo": {
+    "title": "Profit Calculator - Calculate Business Profit",
+    "description": "Calculate gross profit, net profit, and profit margins for your business.",
+    "keywords": ["profit calculator", "business profit", "gross margin", "net margin calculator"]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "data-size-converter",
+  "slug": "data-size-converter",
+  "name": "Data Size Converter",
+  "description": "Convert data storage sizes between bytes, KB, MB, GB, TB, and PB.",
+  "shortDesc": "Convert between data sizes",
+  "category": "converters",
+  "icon": "💾",
+  "inputs": [
+    {
+      "id": "value",
+      "type": "number",
+      "label": "Value",
+      "placeholder": "Enter value to convert",
+      "required": true,
+      "validation": {
+        "min": 0
+      }
+    },
+    {
+      "id": "from",
+      "type": "select",
+      "label": "From",
+      "options": [
+        {"label": "Bytes (B)", "value": "b"},
+        {"label": "Kilobytes (KB)", "value": "kb"},
+        {"label": "Megabytes (MB)", "value": "mb"},
+        {"label": "Gigabytes (GB)", "value": "gb"},
+        {"label": "Terabytes (TB)", "value": "tb"},
+        {"label": "Petabytes (PB)", "value": "pb"}
+      ],
+      "required": true,
+      "defaultValue": "gb"
+    },
+    {
+      "id": "to",
+      "type": "select",
+      "label": "To",
+      "options": [
+        {"label": "Bytes (B)", "value": "b"},
+        {"label": "Kilobytes (KB)", "value": "kb"},
+        {"label": "Megabytes (MB)", "value": "mb"},
+        {"label": "Gigabytes (GB)", "value": "gb"},
+        {"label": "Terabytes (TB)", "value": "tb"},
+        {"label": "Petabytes (PB)", "value": "pb"}
+      ],
+      "required": true,
+      "defaultValue": "mb"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "type": "text",
+      "label": "Converted Size"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "data-size-converter"
+  },
+  "seo": {
+    "title": "Data Size Converter - Convert Storage Units",
+    "description": "Convert data sizes between bytes, KB, MB, GB, TB, and petabytes.",
+    "keywords": ["data size converter", "gb to mb", "mb to kb", "storage converter"]
+  }
+}
