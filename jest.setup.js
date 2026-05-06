@@ -1,31 +1,43 @@
-import '@testing-library/jest-dom';
+require('@testing-library/jest-dom');
 
 // Mock next/navigation
-jest.mock('next/navigation', () => ({
-  useRouter: () => ({
-    push: jest.fn(),
-    replace: jest.fn(),
-    prefetch: jest.fn(),
-    back: jest.fn(),
-    forward: jest.fn(),
-    refresh: jest.fn(),
-  }),
-  useSearchParams: () => ({
-    get: jest.fn(),
-    has: jest.fn(),
-    getAll: jest.fn(),
-  }),
-  usePathname: () => '/',
-}));
+try {
+  require.resolve('next/navigation');
+  jest.mock('next/navigation', () => ({
+    useRouter: () => ({
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
+    }),
+    useSearchParams: () => ({
+      get: jest.fn(),
+      has: jest.fn(),
+      getAll: jest.fn(),
+    }),
+    usePathname: () => '/',
+  }));
+} catch (e) {
+  // next/navigation not available, skipping mock
+}
 
 // Mock next/image
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line jsx-a11y/alt-text
-    return <img {...props} />;
-  },
-}));
+try {
+  require.resolve('next/image');
+  jest.mock('next/image', () => ({
+    __esModule: true,
+    default: (props) => {
+      // Standard way to mock React component without JSX
+      const React = require('react');
+      return React.createElement('img', props);
+    },
+  }));
+} catch (e) {
+  // next/image not available, skipping mock
+}
+
 
 // Mock environment variables
 process.env = {

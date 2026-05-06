@@ -295,6 +295,7 @@ export const cacheTTL = {
   SHORT: 60,        // 1 minute
   MEDIUM: 300,      // 5 minutes
   LONG: 3600,       // 1 hour
+  HOUR: 3600,       // 1 hour
   DAY: 86400,       // 24 hours
   WEEK: 604800,     // 7 days
 };

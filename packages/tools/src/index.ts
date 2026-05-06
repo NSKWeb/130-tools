@@ -132,7 +132,10 @@ import bioGenerator from './configs/social-media/bio-generator.json';
 import captionGenerator from './configs/social-media/caption-generator.json';
 import postScheduler from './configs/social-media/post-scheduler.json';
 
-// All tool configurations (113 tools total)
+// Image Tools
+import imageToBase64 from './configs/image-tools/image-to-base64.json';
+
+// All tool configurations (114 tools total)
 export const toolConfigs: ToolConfig[] = [
   // Calculators (20 tools)
   bmiCalculator as ToolConfig,
@@ -264,6 +267,9 @@ export const toolConfigs: ToolConfig[] = [
   bioGenerator as ToolConfig,
   captionGenerator as ToolConfig,
   postScheduler as ToolConfig,
+
+  // Image Tools
+  imageToBase64 as ToolConfig,
 ];
 
 // Get tool by slug
