@@ -1,0 +1,38 @@
+{
+  "id": "image-to-base64",
+  "slug": "image-to-base64",
+  "name": "Image to Base64",
+  "description": "Convert images to Base64 data strings.",
+  "shortDesc": "Image to Base64 converter",
+  "category": "image-tools",
+  "icon": "🖼️",
+  "inputs": [
+    {
+      "id": "image",
+      "type": "file",
+      "label": "Select Image",
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "base64",
+      "type": "textarea",
+      "label": "Base64 String"
+    },
+    {
+      "id": "preview",
+      "type": "image",
+      "label": "Preview"
+    }
+  ],
+  "logic": {
+    "type": "client",
+    "function": "image-to-base64"
+  },
+  "seo": {
+    "title": "Image to Base64 Converter - Convert Image to String",
+    "description": "Easily convert any image file to a Base64 encoded string for CSS or HTML.",
+    "keywords": ["image to base64", "base64 converter", "image encoder", "data uri"]
+  }
+}

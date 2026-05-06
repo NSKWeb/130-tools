@@ -228,7 +228,7 @@ export class FileUploadError extends AppError {
     super(
       'FILE_UPLOAD_ERROR',
       message,
-      message.includes('size') ? 413 : 415,
+      message.toLowerCase().includes('large') || message.toLowerCase().includes('size') ? 413 : 415,
       { fileName, maxSize },
       true
     );
